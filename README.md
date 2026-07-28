@@ -92,6 +92,51 @@ The φῶς (Phos, Light) shines in the dark, and the dark has not overcome it.
 
 And the light goes on shining in the dark; it is not overcome by the dark.
 
+## Illuminated Words
+
+One of the distinguishing features of the Illuminated Bible is the concept of the **illuminated word**.
+
+An illuminated word is a significant biblical word that is seamlessly integrated into the flowing English text by revealing its original biblical-language form, transliteration, and meaning. The goal is to enrich the reader's understanding without interrupting the natural rhythm of reading.
+
+For example:
+
+> In the beginning God (אֱלֹהִים — Elohim) created the heavens (שָׁמַיִם — shamayim) and the earth (אֶרֶץ — erets).
+
+The English sentence remains continuous. The original language appears only at carefully selected moments where it adds theological, literary, or historical depth.
+
+Unlike a traditional interlinear Bible, the Illuminated Bible does not annotate every word. Instead, it illuminates only those words that are central to understanding the biblical narrative.
+
+### Categories of Illuminated Words
+
+Illuminated words are selected from recurring biblical themes, including:
+
+- Divine Names
+
+- Creation
+
+- Humanity
+
+- Covenant
+
+- Worship
+
+- Salvation
+
+- Virtues
+
+- Prophecy and Fulfillment
+
+- Sacred Places
+
+- Significant People
+
+This editorial approach allows readers to enjoy the Bible as continuous literature while discovering the richness of the original Hebrew, Aramaic, and Greek through carefully chosen illuminated words.
+
+Editorial Principle:
+
+"An illuminated word illuminates understanding without interrupting reading."
+
+
 License
 
 This project is released under the Apache License, Version 2.0.
