@@ -1,0 +1,21 @@
+verse:
+
+  reference: "1:1"
+
+  foundation: BEB
+
+  illuminated:
+
+    enabled: true
+
+  web:
+
+    enabled: true
+
+  lexical_notes:
+
+    enabled: true
+
+  artwork:
+
+    enabled: true
