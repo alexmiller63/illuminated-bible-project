@@ -1,0 +1,35 @@
+book: Genesis
+
+chapter: 1
+
+verses:
+
+  - reference: "1:1"
+
+    foundation: BEB
+
+    illuminated: ...
+
+    web: ...
+
+    lexical_notes: ...
+
+  - reference: "1:2"
+
+    foundation: WEB
+
+    illuminated: ...
+
+    web: ...
+
+    lexical_notes: ...
+
+  - reference: "1:3"
+
+    foundation: WEB
+
+    illuminated: ...
+
+    web: ...
+
+    lexical_notes: ...
