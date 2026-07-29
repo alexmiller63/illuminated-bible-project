@@ -1,0 +1,39 @@
+artwork:
+
+  style: illuminated_manuscript
+
+  borders:
+
+    enabled: true
+
+  illuminated_initials:
+
+    enabled: true
+
+  gold_leaf:
+
+    enabled: true
+
+  botanical_elements:
+
+    enabled: true
+
+  biblical_scene:
+
+    enabled: true
+
+  marginal_illustrations:
+
+    enabled: true
+
+  color_palette:
+
+    - parchment
+
+    - gold
+
+    - deep_blue
+
+    - crimson
+
+    - emerald
