@@ -6,7 +6,7 @@ Illuminated Bible Project
 
 Restrained Art – Eternal Truth
 
-The Illuminated Bible Project is an open-source effort to present the Bible in a way that preserves the biblical text while illuminating selected words with the original Hebrew and Greek, careful transliterations, and concise English glosses.
+The Illuminated Bible Project is an open-source effort to present the Bible in a way that preserves the biblical text while illuminating selected words with the original Hebrew, Greek, Aramaic, and Siriac careful transliterations, IPA, and English and concise English glosses.
 
 Rather than replacing Scripture with commentary or paraphrase, each illuminated verse enriches an existing public-domain translation while preserving its wording. The illuminated verse is immediately followed by the unmodified source translation so readers can compare them directly.
 
