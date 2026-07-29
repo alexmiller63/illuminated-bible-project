@@ -1,0 +1,43 @@
+chapter:
+
+  book: Genesis
+
+  chapter: 1
+
+  verses:
+
+    - verse: 1
+
+      foundation: BEB
+
+      illuminated: true
+
+      web: true
+
+      lexical_notes: true
+
+      artwork: creation-light
+
+    - verse: 2
+
+      foundation: WEB
+
+      illuminated: true
+
+      web: true
+
+      lexical_notes: true
+
+      artwork: deep-and-waters
+
+    - verse: 3
+
+      foundation: WEB
+
+      illuminated: true
+
+      web: true
+
+      lexical_notes: true
+
+      artwork: let-there-be-light
