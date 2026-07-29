@@ -1,1 +1,74 @@
-methodology
+Illuminated Bible Project
+
+YAML Specification
+
+Page 1 — Document Structure
+
+project:
+  name: "Illuminated Bible"
+  version: "1.0"
+  status: Draft
+
+book:
+
+  front_matter:
+
+    - cover
+    - spine
+    - back_cover
+    - title_page
+    - copyright
+    - dedication
+    - preface
+    - foreword
+    - editorial_vision
+    - reading_guide
+    - lexical_philosophy
+    - table_of_contents
+
+  body:
+
+    - old_testament
+    - new_testament
+
+chapter:
+
+  display_book_name_once: true
+
+verse:
+
+  display_reference_only: true
+  examples:
+    - "1:1"
+    - "1:2"
+    - "1:3"
+
+  sequence:
+
+    - editorial_foundation
+    - illuminated_verse
+    - web_text
+    - lexical_notes
+
+editorial_foundation:
+
+  allowed_values:
+    - WEB
+    - BEB
+
+  display: true
+
+  description: >
+    Indicates which English translation served as the editorial
+    foundation for composing the illuminated verse.
+
+web_text:
+
+  display: true
+
+  label: none
+
+  description: >
+    The World English Bible text is always printed immediately
+    after the illuminated verse regardless of whether the
+    editorial foundation was WEB or BEB.
