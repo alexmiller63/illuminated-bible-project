@@ -1,0 +1,25 @@
+front_matter:
+
+  - type: cover
+
+  - type: spine
+
+  - type: back_cover
+
+  - type: title_page
+
+  - type: copyright
+
+  - type: dedication
+
+  - type: preface
+
+  - type: foreword
+
+  - type: editorial_vision
+
+  - type: reading_guide
+
+  - type: lexical_philosophy
+
+  - type: table_of_contents
