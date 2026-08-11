@@ -1,0 +1,536 @@
+# page-design.yaml
+
+#
+
+# Page-design rules for the illuminated Bible project.
+
+#
+
+# Purpose:
+
+#   This file defines presentation and typography.
+
+#   It is intentionally separate from Bible.yml, which defines biblical content,
+
+#   textual foundation, illumination, lexical notes, artwork, and related metadata.
+
+#
+
+# Typographic reference:
+
+#   Traditional NKJV-style Bible typography, especially:
+
+#   - two-column page structure
+
+#   - continuous prose paragraphs
+
+#   - superscript verse numbers
+
+#   - prominent chapter numerals
+
+#   - restrained serif typography
+
+#   - compact bottom-of-page textual notes
+
+#
+
+# The goal is not to reproduce a particular commercial edition exactly.
+
+# The goal is to preserve the visual grammar of a traditional printed Bible
+
+# while allowing richer Hebrew, Greek, IPA, lexical, and scholarly illumination.
+
+page_design:
+
+  version: 1
+
+  design_principle:
+
+    primary: >
+
+      The primary reading surface should remain recognizably biblical rather
+
+      than resembling an interlinear, database, textbook, or technical manual.
+
+    secondary: >
+
+      Scholarly material should enrich the reading without overwhelming
+
+      the biblical text.
+
+    reference_style: traditional_print_bible
+
+  page:
+
+    layout: two_column
+
+    columns:
+
+      count: 2
+
+      equal_width: true
+
+      gutter: narrow
+
+      text_alignment: justified
+
+    margins:
+
+      style: traditional_bible
+
+      outer_margin: moderate
+
+      inner_margin: moderate
+
+      top_margin: moderate
+
+      bottom_margin: footnote_aware
+
+    reading_flow:
+
+      direction: top_to_bottom
+
+      column_order: left_then_right
+
+  headings:
+
+    book:
+
+      display_name:
+
+        alignment: centered
+
+        case: uppercase
+
+        letter_spacing: expanded
+
+        prominence: high
+
+      traditional_superscription:
+
+        enabled: true
+
+        alignment: centered
+
+        case: uppercase
+
+        size: small
+
+        placement: above_book_name
+
+    chapter:
+
+      numeral:
+
+        style: large_initial
+
+        prominence: high
+
+        placement: paragraph_opening
+
+        wrap_text: true
+
+      heading:
+
+        normally_displayed: false
+
+  biblical_text:
+
+    body:
+
+      font_family: serif
+
+      style: traditional_book
+
+      weight: regular
+
+      contrast: high
+
+      density: compact_readable
+
+      paragraphs:
+
+        mode: continuous_prose
+
+        verse_per_line: false
+
+        preserve_paragraph_breaks: true
+
+      alignment: justified
+
+      line_spacing:
+
+        style: compact
+
+        priority: readability
+
+    verse_numbers:
+
+      style: superscript
+
+      size: small
+
+      weight: semibold
+
+      interrupt_text_flow: false
+
+      show_every_verse: true
+
+    chapter_and_verse_reference:
+
+      running_reference:
+
+        enabled: optional
+
+  source_languages:
+
+    hebrew:
+
+      enabled: true
+
+      script_direction: rtl
+
+      font_category: hebrew_serif
+
+      preserve_diacritics: true
+
+      preserve_cantillation: configurable
+
+      inline:
+
+        allowed: true
+
+        direction_isolation: true
+
+      display:
+
+        allowed: true
+
+        alignment: natural
+
+    greek:
+
+      enabled: true
+
+      font_category: greek_serif
+
+      preserve_diacritics: true
+
+      inline:
+
+        allowed: true
+
+      display:
+
+        allowed: true
+
+  ipa:
+
+    enabled: true
+
+    role: pronunciation_aid
+
+    placement:
+
+      preferred: inline_illumination
+
+      standalone: allowed_when_needed
+
+    typography:
+
+      font_category: unicode_serif_or_sans
+
+      size_relative_to_body: smaller
+
+      visual_priority: secondary
+
+    delimiter:
+
+      style: slash
+
+      example: "/bəˈreʃit/"
+
+  illumination:
+
+    enabled: true
+
+    principle: >
+
+      Inline illumination should provide information useful during immediate
+
+      reading, while longer scholarly discussion should be moved into notes.
+
+    inline:
+
+      allowed_elements:
+
+        - hebrew
+
+        - greek
+
+        - transliteration
+
+        - ipa
+
+        - concise_gloss
+
+        - concise_lexical_note
+
+      visual_priority: secondary
+
+      must_not_dominate_biblical_text: true
+
+    expanded:
+
+      preferred_location: footnote
+
+      use_for:
+
+        - extended_lexical_discussion
+
+        - rarity_or_frequency_notes
+
+        - cross_references
+
+        - textual_variants
+
+        - translation_explanation
+
+        - grammatical_discussion
+
+        - historical_note
+
+  footnotes:
+
+    enabled: true
+
+    numbering:
+
+      style: arabic
+
+      sequence: page_or_document_configurable
+
+    marker:
+
+      location: text
+
+      style: superscript
+
+      size: small
+
+    placement:
+
+      preferred: bottom_of_page
+
+      fallback: bottom_of_column
+
+      separation_rule: true
+
+    typography:
+
+      font_family: serif
+
+      size_relative_to_body: smaller
+
+      density: compact
+
+      alignment: left
+
+    reference_label:
+
+      include_scripture_reference: true
+
+      example: "1:2"
+
+    content:
+
+      allowed:
+
+        - lexical_notes
+
+        - textual_notes
+
+        - translation_notes
+
+        - manuscript_variants
+
+        - cross_references
+
+        - source_language_discussion
+
+        - grammatical_notes
+
+        - pronunciation_notes
+
+        - editorial_notes
+
+    example_use:
+
+      tohu_va_bohu:
+
+        marker_required: true
+
+        note_type: lexical
+
+        purpose: >
+
+          Discuss the comparative frequency of tohu and bohu and identify
+
+          the relevant biblical occurrences without burdening the main text.
+
+  italics:
+
+    enabled: true
+
+    uses:
+
+      - editorial_clarification
+
+      - transliterated_terms_when_appropriate
+
+      - titles_when_appropriate
+
+    rule: >
+
+      Italics must have an explicitly defined editorial meaning and should
+
+      never be used merely as decoration.
+
+  emphasis:
+
+    bold:
+
+      biblical_body_text: avoid
+
+      headings: allowed
+
+      note_labels: allowed
+
+    small_caps:
+
+      allowed_for:
+
+        - headings
+
+        - divine_name_if_required_by_translation_policy
+
+  visual_hierarchy:
+
+    order:
+
+      - biblical_text
+
+      - book_and_chapter_structure
+
+      - inline_illumination
+
+      - verse_numbers
+
+      - footnote_markers
+
+      - scholarly_footnotes
+
+    rule: >
+
+      Nothing in the scholarly apparatus should visually compete with the
+
+      biblical text for primary attention.
+
+  artwork:
+
+    enabled: true
+
+    principle: >
+
+      Artwork may illuminate the text but must not compromise the readability
+
+      or traditional visual identity of the Bible page.
+
+    placement:
+
+      full_page: allowed
+
+      half_page: allowed
+
+      inset: allowed
+
+      behind_text: discouraged
+
+    text_interference: prohibited
+
+  accessibility:
+
+    minimum_readability: required
+
+    requirements:
+
+      - sufficient_text_contrast
+
+      - clear_verse_markers
+
+      - unicode_source_languages
+
+      - unicode_ipa
+
+      - selectable_text_when_digital
+
+      - semantic_reading_order
+
+  digital_rendering:
+
+    responsive: true
+
+    wide_screen:
+
+      preferred_layout: two_column
+
+    narrow_screen:
+
+      preferred_layout: single_column
+
+    preserve:
+
+      - verse_numbers
+
+      - chapter_structure
+
+      - footnote_links
+
+      - source_language_direction
+
+      - illumination_hierarchy
+
+    footnotes:
+
+      print: bottom_of_page
+
+      digital: linked_note_or_popover
+
+  print_rendering:
+
+    preferred_layout: two_column
+
+    preserve:
+
+      - continuous_prose
+
+      - superscript_verse_numbers
+
+      - large_chapter_initial
+
+      - bottom_of_page_footnotes
+
+      - centered_book_heading
+
+  editorial_rule:
+
+    do_not_mimic_exact_edition: true
+
+    statement: >
+
+      The NKJV page serves as a typographic reference for traditional Bible
+
+      design conventions. Exact proprietary fonts, measurements, composition,
+
+      or edition-specific trade dress are not to be copied.
+
