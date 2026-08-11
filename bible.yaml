@@ -1,0 +1,504 @@
+illuminated_bible:
+
+  project:
+
+    name: "The Illuminated Bible"
+
+    prototype:
+
+      passages:
+
+        - book: Genesis
+
+          chapter: 1
+
+          verses: "1-10"
+
+        - book: John
+
+          chapter: 1
+
+          verses: "1-10"
+
+  translations:
+
+    editorial_sources:
+
+      - code: BBE
+
+        name: "Bible in Basic English"
+
+      - code: WEB
+
+        name: "World English Bible"
+
+    verse_selection:
+
+      rule: >
+
+        Each verse is considered independently. The editor selects
+
+        either BBE or WEB as the source of the illuminated verse,
+
+        according to which rendering is clearer, stronger, more
+
+        expressive, or otherwise better suited to the purposes of
+
+        the Illuminated Bible.
+
+      source_label:
+
+        enabled: true
+
+        values:
+
+          - BBE
+
+          - WEB
+
+    web_parallel_text:
+
+      enabled: true
+
+      rule: >
+
+        Every illuminated verse is followed by the corresponding
+
+        verse from the World English Bible.
+
+      purpose: >
+
+        This preserves the complete WEB text in canonical order,
+
+        allowing a reader to read the entire World English Bible
+
+        continuously even when individual illuminated verses use
+
+        the BBE as their editorial source.
+
+  illumination:
+
+    definition: >
+
+      Illumination is linguistic rather than pictorial. Selected
+
+      biblically significant words or phrases within the English
+
+      verse are expanded to reveal important information from the
+
+      original biblical language.
+
+    selection_principle: >
+
+      Words are selected for illumination because of their biblical
+
+      significance, not merely because they are nouns or other
+
+      content words.
+
+    significance_categories:
+
+      - theological
+
+      - divine_name
+
+      - canonical
+
+      - literary
+
+      - covenantal
+
+      - ritual
+
+      - prophetic
+
+      - christological
+
+      - cultural
+
+      - historical
+
+      - linguistic
+
+      - grammatical
+
+      - cosmological
+
+      - worldview
+
+      - recurring_biblical_term
+
+      - title_or_book_name
+
+      - paired_concept
+
+      - translation_nuance
+
+    selection_guidelines:
+
+      illuminate_when:
+
+        - >
+
+          A word is a divine name or title.
+
+        - >
+
+          A word is central to an important biblical or theological
+
+          concept.
+
+        - >
+
+          The original-language word conveys meaning or nuance that
+
+          is obscured or reduced in English translation.
+
+        - >
+
+          The word has unusual or significant grammatical features.
+
+        - >
+
+          The word has canonical importance elsewhere in Scripture.
+
+        - >
+
+          The word or phrase functions as a traditional title or
+
+          name of a biblical book or section.
+
+        - >
+
+          The word participates in an important recurring biblical
+
+          motif.
+
+        - >
+
+          The original-language term provides useful cultural or
+
+          historical information.
+
+        - >
+
+          The original-language term may provide insight into the
+
+          worldview or conceptual framework of the biblical writer.
+
+        - >
+
+          Two or more terms form an important conceptual pair and
+
+          illuminating them together adds understanding.
+
+        - >
+
+          A translation choice conceals an important feature of the
+
+          original-language expression.
+
+      do_not_illuminate_merely_because:
+
+        - the_word_is_a_noun
+
+        - the_word_is_a_verb
+
+        - the_word_is_a_content_word
+
+        - the_word_is_concrete
+
+        - the_word_occurs_frequently
+
+        - the_word_seems_important_in_English
+
+      editorial_restraint: >
+
+        Illumination should add understanding rather than clutter.
+
+        Not every word for which an original-language equivalent can
+
+        be supplied should be illuminated.
+
+  illuminated_word:
+
+    display_order:
+
+      - english
+
+      - original_language
+
+      - transliteration
+
+      - ipa
+
+    rule: >
+
+      The English word remains in its normal position in the selected
+
+      English verse. Its original-language form, transliteration, and
+
+      IPA pronunciation follow it. Reading then resumes with the next
+
+      portion of the English verse.
+
+    fields:
+
+      english:
+
+        required: true
+
+      original_language:
+
+        required: true
+
+      transliteration:
+
+        required: true
+
+      ipa:
+
+        required: true
+
+  original_languages:
+
+    old_testament:
+
+      language: Hebrew
+
+      script:
+
+        use_hebrew_letters: true
+
+        include_vowel_points: true
+
+      textual_convention: >
+
+        Use pointed Masoretic Hebrew for the displayed Hebrew form.
+
+      pronunciation:
+
+        standard: "Modern Israeli Hebrew"
+
+        ipa: true
+
+        rationale: >
+
+          Modern Israeli Hebrew is used as the practical reader-facing
+
+          pronunciation standard. It is a living Hebrew pronunciation
+
+          used in contemporary Jewish life, including synagogue worship
+
+          and biblical reading.
+
+        historical_claim: false
+
+        disclaimer: >
+
+          The Modern Israeli pronunciation is not presented as a
+
+          reconstruction of the pronunciation of biblical authors or
+
+          of ancient Israel. Jewish communities also preserve Ashkenazi,
+
+          Sephardi, Yemenite, and other pronunciation traditions.
+
+    new_testament:
+
+      language: Greek
+
+      script:
+
+        use_greek_letters: true
+
+        include_diacritics: true
+
+      pronunciation:
+
+        standard: null
+
+        ipa: true
+
+        note: >
+
+          A consistent pronunciation standard for New Testament Greek
+
+          must be selected and documented before the prototype is
+
+          finalized.
+
+  interpretation:
+
+    evidence_rule: >
+
+      Distinguish observable linguistic facts from historical,
+
+      theological, cosmological, or cultural interpretations derived
+
+      from those facts.
+
+    linguistic_fact:
+
+      rule: >
+
+        Features directly supported by the original-language text,
+
+        morphology, grammar, or established lexical evidence may be
+
+        presented as linguistic observations.
+
+    interpretation:
+
+      rule: >
+
+        Broader conclusions suggested by those linguistic observations
+
+        should be identified as interpretations or possibilities rather
+
+        than stated as established linguistic facts.
+
+  prototype_word_choices:
+
+    genesis_1_1:
+
+      reference: "Genesis 1:1"
+
+      illumination_choices:
+
+        - english: "beginning"
+
+          original_language_key: bereshit
+
+          significance:
+
+            - canonical
+
+            - literary
+
+            - title_or_book_name
+
+          rationale: >
+
+            Bereshit is the opening word of Genesis and the traditional
+
+            Hebrew title of the book.
+
+        - english: "God"
+
+          original_language_key: elohim
+
+          significance:
+
+            - theological
+
+            - divine_name
+
+            - recurring_biblical_term
+
+          rationale: >
+
+            Elohim is a foundational Hebrew designation for God and an
+
+            important recurring term throughout the Hebrew Bible.
+
+        - english: "heavens"
+
+          original_language_key: shamayim
+
+          significance:
+
+            - linguistic
+
+            - grammatical
+
+            - cosmological
+
+            - worldview
+
+          rationale: >
+
+            Shamayim has a form associated with the Hebrew dual ending.
+
+            Its morphology and usage make it a candidate for illumination
+
+            because they may contribute to understanding ancient concepts
+
+            of the heavens.
+
+          interpretation_note: >
+
+            Conclusions about a specific ancient cosmological model,
+
+            including interpretations involving two skies or a spherical
+
+            Earth, should be distinguished from the linguistic observation
+
+            itself.
+
+        - english: "earth"
+
+          original_language_key: eretz
+
+          significance:
+
+            - cosmological
+
+            - worldview
+
+            - paired_concept
+
+          rationale: >
+
+            Eretz forms the conceptual counterpart to shamayim in the
+
+            expression "the heavens and the earth." Illuminating the two
+
+            terms together may reveal information obscured by treating
+
+            them simply as ordinary English nouns.
+
+  lexical_entries:
+
+    hebrew:
+
+      bereshit:
+
+        english: "beginning"
+
+        hebrew: "בְּרֵאשִׁית"
+
+        transliteration: "bereshit"
+
+        ipa: null
+
+      elohim:
+
+        english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "elohim"
+
+        ipa: null
+
+      shamayim:
+
+        english: "heavens"
+
+        hebrew: "שָׁמַיִם"
+
+        transliteration: "shamayim"
+
+        ipa: null
+
+      eretz:
+
+        english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: null
+
