@@ -56,6 +56,30 @@ illuminated_bible:
 
           - WEB
 
+    translation_fidelity:
+
+      rule: >
+
+        The illuminated text preserves the wording of the selected
+
+        English translation exactly. Illumination annotates the
+
+        translation; it does not rewrite, correct, harmonize, or
+
+        modernize it.
+
+      original_language_note: >
+
+        An illuminated original-language term may differ in number,
+
+        grammatical form, semantic range, or nuance from its English
+
+        rendering. Those differences belong in the illumination and
+
+        explanatory material rather than as alterations to the
+
+        selected English translation.
+
     web_parallel_text:
 
       enabled: true
@@ -65,6 +89,10 @@ illuminated_bible:
         Every illuminated verse is followed by the corresponding
 
         verse from the World English Bible.
+
+      source_label:
+
+        enabled: false
 
       purpose: >
 
@@ -90,11 +118,35 @@ illuminated_bible:
 
     selection_principle: >
 
-      Words are selected for illumination because of their biblical
+      Words and phrases are selected for illumination because of
 
-      significance, not merely because they are nouns or other
+      their biblical significance, not merely because they are
 
-      content words.
+      nouns or other content words.
+
+    verse_independence:
+
+      rule: >
+
+        Every verse must be capable of serving as a reader's first
+
+        encounter with the Illuminated Bible. An otherwise warranted
+
+        illumination must not be omitted merely because the same word
+
+        or expression was illuminated in an earlier verse.
+
+    compound_expressions:
+
+      rule: >
+
+        When biblical or linguistic significance belongs to a
+
+        compound expression, the expression should be illuminated
+
+        as a unit rather than artificially divided into separate
+
+        word illuminations.
 
     significance_categories:
 
@@ -234,13 +286,13 @@ illuminated_bible:
 
     rule: >
 
-      The English word remains in its normal position in the selected
+      The English word or phrase remains in its normal position in
 
-      English verse. Its original-language form, transliteration, and
+      the selected English verse. Its original-language form,
 
-      IPA pronunciation follow it. Reading then resumes with the next
+      transliteration, and IPA pronunciation follow it inline.
 
-      portion of the English verse.
+      Reading then resumes with the next portion of the English verse.
 
     fields:
 
@@ -259,6 +311,36 @@ illuminated_bible:
       ipa:
 
         required: true
+
+  footnotes:
+
+    enabled: true
+
+    numbering:
+
+      style: numeric
+
+      restart: page
+
+    placement: bottom_of_page
+
+    rule: >
+
+      Detailed lexical, textual, historical, or interpretive material
+
+      that would overload the inline illumination may be placed in a
+
+      numbered footnote. A superscript numeral in the text points to
+
+      the corresponding note at the bottom of the page.
+
+    citation_rule: >
+
+      Where a footnote makes a claim about the distribution, rarity,
+
+      or use of a biblical word or expression, relevant biblical
+
+      citations should be supplied.
 
   original_languages:
 
@@ -358,6 +440,84 @@ illuminated_bible:
 
         than stated as established linguistic facts.
 
+  cosmological_hypotheses:
+
+    rule: >
+
+      Where features of the biblical text suggest a possible
+
+      cosmological conception, the Illuminated Bible may identify
+
+      and explore that conception as a hypothesis.
+
+    evidence_standard: >
+
+      The textual or linguistic evidence supporting the hypothesis
+
+      must be identified separately from the interpretation derived
+
+      from it.
+
+    status_labels:
+
+      - observation
+
+      - possibility
+
+      - hypothesis
+
+      - competing_hypothesis
+
+      - strongly_supported
+
+      - unresolved
+
+    cross_reference: true
+
+    cumulative_analysis: >
+
+      Cosmological hypotheses may draw evidence from multiple
+
+      passages. Later passages may support, modify, compete with,
+
+      or weaken hypotheses proposed earlier in the biblical text.
+
+    hypotheses:
+
+      sky_above_sky_below:
+
+        name: "Sky Above / Sky Below"
+
+        status: hypothesis
+
+        first_reference: "Genesis 1:1"
+
+        hypothesis: >
+
+          The form shamayim may preserve or reflect a conception of
+
+          the heavens as a pair: the sky above and the sky below.
+
+        possible_model: >
+
+          On a spherical Earth, "sky above" and "sky below" can be
+
+          understood from the observer's perspective as the heavens
+
+          extending around the Earth, rather than necessarily as two
+
+          solid layers located above a flat Earth.
+
+        caution: >
+
+          The grammatical form of shamayim by itself does not establish
+
+          this cosmological interpretation. The hypothesis is therefore
+
+          presented as an interpretation prompted by the linguistic
+
+          feature rather than as a meaning proved by the Hebrew word.
+
   prototype_word_choices:
 
     genesis_1_1:
@@ -402,7 +562,7 @@ illuminated_bible:
 
             important recurring term throughout the Hebrew Bible.
 
-        - english: "heavens"
+        - english: "heaven"
 
           original_language_key: shamayim
 
@@ -418,23 +578,23 @@ illuminated_bible:
 
           rationale: >
 
-            Shamayim has a form associated with the Hebrew dual ending.
+            Shamayim has a form historically associated with Hebrew
 
-            Its morphology and usage make it a candidate for illumination
+            dual morphology. Its morphology and usage make it a
 
-            because they may contribute to understanding ancient concepts
+            candidate for illumination because they may contribute
 
-            of the heavens.
+            to understanding biblical concepts of the heavens.
 
           interpretation_note: >
 
-            Conclusions about a specific ancient cosmological model,
+            The Sky Above / Sky Below interpretation is preserved as
 
-            including interpretations involving two skies or a spherical
+            a cosmological hypothesis. The morphology of shamayim
 
-            Earth, should be distinguished from the linguistic observation
+            motivates investigation of the hypothesis but does not
 
-            itself.
+            establish it.
 
         - english: "earth"
 
@@ -452,11 +612,85 @@ illuminated_bible:
 
             Eretz forms the conceptual counterpart to shamayim in the
 
-            expression "the heavens and the earth." Illuminating the two
+            expression "the heaven and the earth." Illuminating the
 
-            terms together may reveal information obscured by treating
+            two terms together may reveal information obscured by
 
-            them simply as ordinary English nouns.
+            treating them simply as ordinary English nouns.
+
+    genesis_1_2:
+
+      reference: "Genesis 1:2"
+
+      status: developing
+
+      illumination_choices:
+
+        - english: "earth"
+
+          original_language_key: eretz
+
+        - english: "formless and empty"
+
+          original_language_key: tohu_va_bohu
+
+        - english: "Darkness"
+
+          original_language_key: choshekh
+
+        - english: "the deep"
+
+          original_language_key: tehom
+
+        - english: "God's Spirit"
+
+          original_language_key: ruach_elohim
+
+        - english: "waters"
+
+          original_language_key: mayim
+
+      editorial_note: >
+
+        All six illuminations survive the editorial-restraint test.
+
+        Compound expressions such as "formless and empty" and
+
+        "God's Spirit" are illuminated as units.
+
+      planned_footnotes:
+
+        - key: tohu_va_bohu_usage
+
+          subject: "tohu va-bohu"
+
+          note: >
+
+            The footnote will discuss the unequal lexical evidence
+
+            for tohu and bohu. Tohu is attested independently in
+
+            additional biblical contexts and therefore has a broader
+
+            independently observable semantic range. Bohu is
+
+            exceptionally rare and is attested in Genesis 1:2,
+
+            Isaiah 34:11, and Jeremiah 4:23 in association with tohu.
+
+            The note should therefore avoid implying equal certainty
+
+            in assigning separate English meanings to the two members
+
+            of the Hebrew expression.
+
+          citations:
+
+            - "Genesis 1:2"
+
+            - "Isaiah 34:11"
+
+            - "Jeremiah 4:23"
 
   lexical_entries:
 
@@ -470,7 +704,7 @@ illuminated_bible:
 
         transliteration: "bereshit"
 
-        ipa: null
+        ipa: "/beʁeˈʃit/"
 
       elohim:
 
@@ -480,17 +714,27 @@ illuminated_bible:
 
         transliteration: "elohim"
 
-        ipa: null
+        ipa: "/eloˈhim/"
 
       shamayim:
 
-        english: "heavens"
+        english: "heaven"
 
         hebrew: "שָׁמַיִם"
 
         transliteration: "shamayim"
 
-        ipa: null
+        ipa: "/ʃaˈmajim/"
+
+        linguistic_note: >
+
+          Shamayim has a form historically associated with Hebrew
+
+          dual morphology.
+
+        cosmological_hypotheses:
+
+          - sky_above_sky_below
 
       eretz:
 
@@ -500,5 +744,125 @@ illuminated_bible:
 
         transliteration: "eretz"
 
+        ipa: "/ˈeʁets/"
+
+      tohu_va_bohu:
+
+        english: "formless and empty"
+
+        hebrew: "תֹהוּ וָבֹהוּ"
+
+        transliteration: "tohu va-bohu"
+
         ipa: null
+
+        lexical_note: >
+
+          Tohu is independently attested elsewhere in the Hebrew
+
+          Bible and has a broader observable semantic range. Bohu
+
+          is exceptionally rare, making its independent meaning
+
+          substantially more difficult to establish.
+
+        footnote: tohu_va_bohu_usage
+
+      choshekh:
+
+        english: "darkness"
+
+        hebrew: "חֹשֶׁךְ"
+
+        transliteration: "choshekh"
+
+        ipa: null
+
+      tehom:
+
+        english: "the deep"
+
+        hebrew: "תְּהוֹם"
+
+        transliteration: "tehom"
+
+        ipa: null
+
+      ruach_elohim:
+
+        english: "God's Spirit"
+
+        hebrew: "רוּחַ אֱלֹהִים"
+
+        transliteration: "ruach Elohim"
+
+        ipa: null
+
+        lexical_note: >
+
+          Ruach has a semantic range that includes spirit, wind,
+
+          and breath. The translation choice therefore conceals a
+
+          feature of the Hebrew expression worth illuminating.
+
+      mayim:
+
+        english: "waters"
+
+        hebrew: "מַיִם"
+
+        transliteration: "mayim"
+
+        ipa: null
+
+  text:
+
+    genesis:
+
+      chapter_1:
+
+        - reference: "Genesis 1:1"
+
+          source: BBE
+
+          source_text: >
+
+            In the beginning God made the heaven and the earth.
+
+          illuminated:
+
+            segments:
+
+              - text: "In the "
+
+              - text: "beginning"
+
+                illumination: bereshit
+
+              - text: " God"
+
+                illumination: elohim
+
+              - text: " made the "
+
+              - text: "heaven"
+
+                illumination: shamayim
+
+              - text: " and the "
+
+              - text: "earth"
+
+                illumination: eretz
+
+              - text: "."
+
+          web_parallel: >
+
+            In the beginning, God created the heavens and the earth.
+
+        - reference: "Genesis 1:2"
+
+          status: developing
 
