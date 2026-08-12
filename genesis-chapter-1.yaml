@@ -1,22 +1,22 @@
-# Bible.yml
+# ============================================================
+
+# genesis-chapter-1.yaml
 
 #
 
-# The Illuminated Bible
+# THE ILLUMINATED BIBLE
 
-# Canonical editorial and presentation rules
-
-#
-
-# Verse text belongs in book/passage source files such as:
-
-#   genesis-1-1-10.yaml
+# Genesis Chapter 1
 
 #
 
-# Approved readable editions may also be preserved as Markdown:
+# Canonical chapter source
 
-#   genesis-1-1-10.md
+# ============================================================
+
+book: Genesis
+
+chapter: 1
 
 project:
 
@@ -26,89 +26,99 @@ project:
 
   author: "Alexander Ferrari Miller"
 
-publication:
+# ============================================================
 
-  format: "collection_of_books"
+# CHAPTER PRESENTATION
 
-  principle: >
+# ============================================================
 
-    The Illuminated Bible is published as a collection of individual
+presentation:
 
-    biblical books rather than as one single-volume Bible.
+  scripture_font_size: 14
 
-  series_identity:
+  columns:
 
-    display_name: "The Illuminated Bible"
+    illuminated:
 
-    placement:
+      position: left
 
-      cover: true
+      english_weight: bold
 
-      spine: true
+    comparison:
 
-book_titles:
+      position: right
 
-  hierarchy:
+      source: WEB
 
-    primary: hebrew
+      english_weight: regular
 
-    secondary: greek
+    footnotes:
 
-    english_title_display: false
+      position: far_right
 
-  hebrew:
+      independent_flow: true
 
-    vocalization: unvocalized
-
-    size_relative_to_greek: larger
-
-    alignment: centered
-
-  greek:
-
-    alignment: centered
-
-    position: below_hebrew
-
-text_layout:
-
-  columns: 2
-
-  column_headings: false
-
-  left_column:
-
-    content: illuminated_text
-
-  right_column:
-
-    content: WEB
-
-    name: "World English Bible"
-
-  row_alignment:
+  verse_alignment:
 
     enabled: true
 
     rule: >
 
-      Each verse forms one horizontal row across both columns.
+      The illuminated verse and corresponding WEB verse must begin
 
-      The illuminated verse and the corresponding WEB verse begin
+      at exactly the same vertical position. Each verse has one shared
 
-      at the same vertical position. Row height is determined by
+      row-top coordinate. The height of the scripture row is determined
 
-      whichever side requires more vertical space.
+      by whichever scripture column requires more vertical space.
 
-  verse_integrity:
+  footnote_flow:
 
     rule: >
 
-      A Bible verse must not break across pages. Each verse remains
+      Footnotes flow independently of scripture verse rows. A long
 
-      complete on a single page. Footnotes may break across pages
+      footnote must not increase the height of its corresponding verse
 
-      and continue on the following page.
+      row or force later scripture verses downward. Footnotes may
+
+      continue onto subsequent pages.
+
+    preserve_complete_text: true
+
+    prohibition: >
+
+      Approved footnotes must never be shortened, summarized,
+
+      paraphrased, weakened, or deleted merely to make a page fit.
+
+  hebrew:
+
+    direction: rtl
+
+    vocalization: fully_vocalized
+
+    system: masoretic
+
+    niqqud: true
+
+    typography:
+
+      category: hebrew_serif
+
+      preferred_face: "Noto Serif Hebrew"
+
+  transliteration:
+
+    style: italic_serif
+
+  ipa:
+
+    style: readable_sans_serif
+
+  table_borders:
+
+    visible: false
 
   layout_integrity:
 
@@ -118,367 +128,1853 @@ text_layout:
 
       Approved illumination and footnotes must not be abbreviated,
 
-      paraphrased, deleted, or reduced merely to make material fit.
+      paraphrased, or deleted merely to make material fit.
 
-verse_source:
+# ============================================================
 
-  scope: per_verse
+# VERSES
 
-  allowed_sources:
+# ============================================================
 
-    - abbreviation: BBE
+verses:
 
-      name: "Bible in Basic English"
+  - reference: "1:1"
 
-    - abbreviation: WEB
+    foundation: Basic English
 
-      name: "World English Bible"
+    illuminated:
 
-  default_preference: BBE
+      - english: "At the first"
 
-  selection_rule: >
+        hebrew: "בְּרֵאשִׁית"
 
-    Each verse is considered independently. BBE is preferred when
+        transliteration: "Bereshit"
 
-    all other considerations are equal. WEB may be selected when its
+        ipa: "/be.reˈʃit/"
 
-    wording is clearer, stronger, more graceful, or better preserves
+      - english: "God"
 
-    a feature important to the original text.
+        hebrew: "אֱלֹהִים"
 
-  display:
+        transliteration: "Elohim"
 
-    show_source: true
+        ipa: "/e.loˈhim/"
 
-    position: after_verse_number
+      - english: "made"
 
-    brackets: false
+        hebrew: "בָּרָא"
 
-    unobtrusive: true
+        transliteration: "bara"
 
-  example: "1 BBE"
+        ipa: "/baˈʁa/"
 
-  genesis_1_map:
+        footnote: bara
 
-    - verses: "1"
+      - english: "the heaven and the earth"
 
-      foundation: BBE
+        hebrew: "אֵת הַשָּׁמַיִם וְאֵת הָאָרֶץ"
 
-    - verses: "2-3"
+        transliteration: "et hashamayim ve'et ha'aretz"
 
-      foundation: WEB
+        footnote: shamayim-dual-skies
 
-    - verses: "4-6"
+    inquiry:
 
-      foundation: BBE
+      id: elohim-bara
 
-    - verses: "7"
+      status: open_question
 
-      foundation: WEB
+  - reference: "1:2"
 
-    - verses: "8-12"
+    foundation: WEB
 
-      foundation: BBE
+    illuminated:
 
-    - verses: "13"
+      - english: "formless and empty"
 
-      foundation: WEB
+        hebrew: "תֹהוּ וָבֹהוּ"
 
-    - verses: "14-17"
+        transliteration: "tohu va-vohu"
 
-      foundation: BBE
+        footnote: tohu-va-vohu
 
-    - verses: "18"
+      - english: "darkness"
 
-      foundation: WEB
+        hebrew: "חֹשֶׁךְ"
 
-    - verses: "19-22"
+        transliteration: "choshekh"
 
-      foundation: BBE
+        ipa: "/ˈχo.ʃeχ/"
 
-    - verses: "23"
+      - english: "God's Spirit"
 
-      foundation: WEB
+        hebrew: "רוּחַ אֱלֹהִים"
 
-    - verses: "24-25"
+        transliteration: "ruach Elohim"
 
-      foundation: BBE
+        ipa: "/ˈʁu.aχ e.loˈhim/"
 
-    - verses: "26"
+        footnote: ruach-elohim
 
-      foundation: WEB
+      - english: "waters"
 
-    - verses: "27-29"
+        hebrew: "מַיִם"
 
-      foundation: BBE
+        transliteration: "mayim"
 
-    - verses: "30"
+        ipa: "/ˈma.jim/"
 
-      foundation: WEB
+  - reference: "1:3"
 
-    - verses: "31"
+    foundation: WEB
 
-      foundation: BBE
+    illuminated:
 
-illumination:
+      - english: "God"
 
-  structure: inline
+        hebrew: "אֱלֹהִים"
 
-  principle: >
+        transliteration: "Elohim"
 
-    The complete English foundation verse remains readable as continuous
+        ipa: "/e.loˈhim/"
 
-    prose. Selected English words or phrases are expanded inline with
+      - english: "Let there be light, and there was light"
 
-    original-language information. Illumination must never replace the
+        hebrew: "יְהִי אוֹר וַיְהִי אוֹר"
 
-    verse with a glossary or interlinear display.
+        transliteration: "yehi or, vayehi or"
 
-  order:
+        ipa: "/jeˈhi oʁ va.jeˈhi oʁ/"
 
-    - english
+        footnote: yehi-or
 
-    - original_script
+  - reference: "1:4"
 
-    - transliteration
+    foundation: Basic English
 
-    - ipa
+    illuminated:
 
-  separator: " — "
+      - english: "God"
 
-  english_typography:
+        hebrew: "אֱלֹהִים"
 
-    rule: >
+        transliteration: "Elohim"
 
-      English words or phrases that receive illumination are bold.
+        ipa: "/e.loˈhim/"
 
-      English words that are not illuminated remain in regular weight.
+      - english: "light"
 
-      The purpose of the bolding is to allow the English foundation text
+        hebrew: "אוֹר"
 
-      to be read naturally and continuously while making illuminated
+        transliteration: "or"
 
-      expressions visually discoverable.
+        ipa: "/oʁ/"
 
-  repeat_policy:
+      - english: "good"
 
-    rule: >
+        hebrew: "טוֹב"
 
-      If a word or phrase merits illumination, illuminate it again when
+        transliteration: "tov"
 
-      it recurs. Each verse must be capable of serving as the reader's
+        ipa: "/tov/"
 
-      first encounter with The Illuminated Bible.
+      - english: "dark"
 
-  density:
+        hebrew: "חֹשֶׁךְ"
 
-    general_rule: >
+        transliteration: "choshekh"
 
-      Exercise restraint, but let the density of illumination be governed
+        ipa: "/ˈχo.ʃeχ/"
 
-      by the linguistic and poetic character of the passage rather than
+  - reference: "1:5"
 
-      by an arbitrary limit.
+    foundation: Basic English
 
-    genesis_1:
+    illuminated:
 
-      density: relatively_dense
+      - english: "light"
 
-      reason: >
+        hebrew: "אוֹר"
 
-        Genesis 1 is highly compressed, repetitive, structured, and poetic.
+        transliteration: "or"
 
-        Dense illumination is appropriate where it reveals that structure.
+        ipa: "/oʁ/"
 
-  selection_principle: >
+      - english: "Day"
 
-    Words and phrases are selected for illumination because of their
+        hebrew: "יוֹם"
 
-    biblical, linguistic, grammatical, literary, historical, theological,
+        transliteration: "yom"
 
-    canonical, cultural, or cosmological significance, not merely because
+      - english: "dark"
 
-    they are nouns, verbs, or content words.
+        hebrew: "חֹשֶׁךְ"
 
-  compound_expressions:
+        transliteration: "choshekh"
 
-    rule: >
+      - english: "Night"
 
-      When biblical or linguistic significance belongs to a compound
+        hebrew: "לַיְלָה"
 
-      expression, illuminate the expression as a unit rather than
+        transliteration: "layla"
 
-      artificially dividing it into separate word illuminations.
+      - english: "evening"
 
-hebrew:
+        hebrew: "עֶרֶב"
 
-  inline_illumination:
+        transliteration: "erev"
 
-    vocalization: fully_vocalized
+        ipa: "/ˈe.ʁev/"
 
-    system: masoretic
+      - english: "morning"
 
-    niqqud: true
+        hebrew: "בֹּקֶר"
 
-  titles:
+        transliteration: "boqer"
 
-    vocalization: unvocalized
+        ipa: "/ˈbo.keʁ/"
 
-    niqqud: false
+      - english: "the first day"
 
-  pronunciation:
+        hebrew: "יוֹם אֶחָד"
 
-    convention: modern_israeli
+        transliteration: "yom echad"
 
-  typography:
+        footnote: yom-echad
 
-    preferred_face: "Noto Serif Hebrew"
+  - reference: "1:6"
 
-transliteration:
+    foundation: Basic English
 
-  purpose: >
+    illuminated:
 
-    Transliteration provides a natural readable form of Hebrew or Greek
+      - english: "God"
 
-    terms for readers who do not read the original script.
+        hebrew: "אֱלֹהִים"
 
-  footnote_usage:
+        transliteration: "Elohim"
 
-    rule: >
+        ipa: "/e.loˈhim/"
 
-      Once an original-language term has been introduced in the illumination,
+      - english: "solid arch"
 
-      footnotes normally refer to it by transliteration rather than repeatedly
+        hebrew: "רָקִיעַ"
 
-      reproducing the original script.
+        transliteration: "raqia"
 
-ipa:
+        ipa: "/ʁaˈki.a/"
 
-  enabled: true
+        footnote: raqia
 
-  purpose: >
+      - english: "waters"
 
-    IPA records pronunciation separately from transliteration.
+        hebrew: "מַיִם"
 
-footnotes:
+        transliteration: "mayim"
 
-  style: numbered
+        ipa: "/ˈma.jim/"
 
-  placement: far_right
+  - reference: "1:7"
 
-  large_print: true
+    foundation: Basic English
 
-  pagination:
+    illuminated:
 
-    may_break_across_pages: true
+      - english: "God"
 
-  use_only_when_necessary: true
+        hebrew: "אֱלֹהִים"
 
-  purpose:
+        transliteration: "Elohim"
 
-    - lexical_range
+      - english: "expanse"
 
-    - unusual_grammar
+        hebrew: "רָקִיעַ"
 
-    - ambiguity
+        transliteration: "raqia"
 
-    - poetic_effect
+        cross_reference: "Genesis 1:6"
 
-    - textual_structure
+      - english: "waters"
 
-    - interpretive_hypothesis
+        hebrew: "מַיִם"
 
-    - cross_reference
+        transliteration: "mayim"
 
-    - historical_context
+  - reference: "1:8"
 
-  principle: >
+    foundation: Basic English
 
-    Footnotes are used for information that cannot fit naturally inside
+    illuminated:
 
-    the illuminated verse without disrupting readability.
+      - english: "God"
 
-  preservation:
+        hebrew: "אֱלֹהִים"
 
-    rule: >
+        transliteration: "Elohim"
 
-      Approved footnotes remain full. They are not shortened, summarized,
+      - english: "expanse"
 
-      simplified, weakened, or removed in order to satisfy layout.
+        hebrew: "רָקִיעַ"
 
-interpretation:
+        transliteration: "raqia"
 
-  governing_principle: >
+      - english: "Heaven"
 
-    Distinguish what the original-language text says from later
+        hebrew: "שָׁמַיִם"
 
-    interpretations, doctrines, and debates. Illuminate the language first;
+        transliteration: "shamayim"
 
-    allow interpretation to follow.
+        cross_reference: "Genesis 1:1"
 
-  hypotheses:
+      - english: "evening"
 
-    labeling_required: true
+        hebrew: "עֶרֶב"
 
-    rule: >
+        transliteration: "erev"
 
-      Interpretive proposals originating with The Illuminated Bible must be
+      - english: "morning"
 
-      explicitly identified as hypotheses and must not be presented as lexical
+        hebrew: "בֹּקֶר"
 
-      facts or as required translations.
+        transliteration: "boqer"
 
-  cross_references:
+      - english: "second day"
 
-    allowed: true
+        hebrew: "יוֹם שֵׁנִי"
 
-    rule: >
+        transliteration: "yom sheni"
 
-      Cross-reference related passages as evidence or parallels for
+  - reference: "1:9"
 
-      consideration. Do not present cross-references as proof unless the
+    foundation: Basic English
 
-      original-language evidence itself warrants that conclusion.
+    illuminated:
 
-editorial_extensions:
+      - english: "God"
 
-  illumination_inquiry:
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "waters"
+
+        hebrew: "מַיִם"
+
+        transliteration: "mayim"
+
+      - english: "heaven"
+
+        hebrew: "שָׁמַיִם"
+
+        transliteration: "shamayim"
+
+      - english: "dry land"
+
+        hebrew: "יַבָּשָׁה"
+
+        transliteration: "yabashah"
+
+  - reference: "1:10"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "Earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+      - english: "Seas"
+
+        hebrew: "יַמִּים"
+
+        transliteration: "yamim"
+
+      - english: "good"
+
+        hebrew: "טוֹב"
+
+        transliteration: "tov"
+
+  - reference: "1:11"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+      - english: "grass / vegetation"
+
+      - english: "herbs yielding seed"
+
+      - english: "seed"
+
+        hebrew: "זֶרַע"
+
+        transliteration: "zera"
+
+      - english: "fruit trees"
+
+      - english: "fruit"
+
+      - english: "after their kind"
+
+  - reference: "1:12"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+      - english: "grass / vegetation"
+
+      - english: "herbs yielding seed"
+
+      - english: "seed"
+
+        hebrew: "זֶרַע"
+
+        transliteration: "zera"
+
+      - english: "after their kind"
+
+      - english: "trees bearing fruit"
+
+      - english: "fruit"
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "it was good"
+
+        hebrew: "כִּי־טוֹב"
+
+        transliteration: "ki tov"
+
+  - reference: "1:13"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+      - english: "a third day"
+
+        hebrew: "יוֹם שְׁלִישִׁי"
+
+        transliteration: "yom shelishi"
+
+    cross_reference: "Genesis 1:5"
+
+  - reference: "1:14"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "lights"
+
+        hebrew: "מְאֹרֹת"
+
+        transliteration: "me'orot"
+
+      - english: "expanse"
+
+        hebrew: "רָקִיעַ"
+
+        transliteration: "raqia"
+
+      - english: "sky / heavens"
+
+        hebrew: "שָׁמַיִם"
+
+        transliteration: "shamayim"
+
+      - english: "day"
+
+        hebrew: "יוֹם"
+
+        transliteration: "yom"
+
+      - english: "night"
+
+        hebrew: "לַיְלָה"
+
+        transliteration: "layla"
+
+      - english: "signs"
+
+      - english: "seasons / appointed times"
+
+        hebrew: "מוֹעֲדִים"
+
+        transliteration: "mo'adim"
+
+        footnote: moadim
+
+      - english: "days"
+
+      - english: "years"
+
+  - reference: "1:15"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "lights"
+
+        transliteration: "me'orot"
+
+      - english: "expanse"
+
+        transliteration: "raqia"
+
+      - english: "sky / heavens"
+
+        transliteration: "shamayim"
+
+      - english: "give light"
+
+      - english: "earth"
+
+        transliteration: "eretz"
+
+  - reference: "1:16"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "two great lights"
+
+      - english: "greater light"
+
+      - english: "rule the day"
+
+      - english: "lesser light"
+
+      - english: "rule the night"
+
+      - english: "stars"
+
+        hebrew: "כּוֹכָבִים"
+
+        transliteration: "kokhavim"
+
+    footnote: sun-moon-naming
+
+  - reference: "1:17"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+      - english: "set them"
+
+      - english: "expanse"
+
+        transliteration: "raqia"
+
+      - english: "sky / heavens"
+
+        transliteration: "shamayim"
+
+      - english: "give light"
+
+      - english: "earth"
+
+        transliteration: "eretz"
+
+    footnote: raqia-shamayim
+
+  - reference: "1:18"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "rule"
+
+      - english: "day"
+
+        transliteration: "yom"
+
+      - english: "night"
+
+        transliteration: "layla"
+
+      - english: "divide"
+
+      - english: "light"
+
+        transliteration: "or"
+
+      - english: "darkness"
+
+        transliteration: "choshekh"
+
+      - english: "God"
+
+        transliteration: "Elohim"
+
+      - english: "it was good"
+
+        transliteration: "ki tov"
+
+  - reference: "1:19"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+        ipa: "/ˈe.ʁev/"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+        ipa: "/ˈbo.keʁ/"
+
+      - english: "a fourth day"
+
+        hebrew: "יוֹם רְבִיעִי"
+
+        transliteration: "yom revi'i"
+
+  - reference: "1:20"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "waters"
+
+        hebrew: "מַיִם"
+
+        transliteration: "mayim"
+
+        ipa: "/ˈma.jim/"
+
+      - english: "living creatures"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        ipa: "/ˈne.feʃ χaˈja/"
+
+        footnote: nefesh-chayah
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+      - english: "expanse"
+
+        hebrew: "רָקִיעַ"
+
+        transliteration: "raqia"
+
+        ipa: "/ʁaˈki.a/"
+
+        cross_reference: "Genesis 1:6–8"
+
+      - english: "sky"
+
+        hebrew: "שָׁמַיִם"
+
+        transliteration: "shamayim"
+
+        ipa: "/ʃaˈma.jim/"
+
+        cross_reference: "Genesis 1:1, 1:8"
+
+  - reference: "1:21"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "great sea creatures"
+
+        hebrew: "הַתַּנִּינִם הַגְּדֹלִים"
+
+        transliteration: "hattanninim hagedolim"
+
+        footnote: tanninim
+
+      - english: "living creature"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "after their kind"
+
+        cross_reference: "Genesis 1:11–12"
+
+      - english: "it was good"
+
+        hebrew: "כִּי־טוֹב"
+
+        transliteration: "ki tov"
+
+        ipa: "/ki tov/"
+
+  - reference: "1:22"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "be fruitful"
+
+        hebrew: "פְּרוּ"
+
+        transliteration: "peru"
+
+        footnote: peru-urvu
+
+      - english: "and multiply"
+
+        hebrew: "וּרְבוּ"
+
+        transliteration: "urvu"
+
+        footnote: peru-urvu
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+    cross_references:
+
+      - "Genesis 1:28"
+
+  - reference: "1:23"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+        ipa: "/ˈe.ʁev/"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+        ipa: "/ˈbo.keʁ/"
+
+      - english: "a fifth day"
+
+        hebrew: "יוֹם חֲמִישִׁי"
+
+        transliteration: "yom chamishi"
+
+  - reference: "1:24"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+      - english: "living creatures"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "livestock / beasts"
+
+        hebrew: "בְּהֵמָה"
+
+        transliteration: "behemah"
+
+        footnote: behemah-behemoth
+
+      - english: "creeping things"
+
+        hebrew: "רֶמֶשׂ"
+
+        transliteration: "remes"
+
+      - english: "after their kind"
+
+        cross_reference: "Genesis 1:11–12"
+
+  - reference: "1:25"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "after their kind"
+
+        cross_reference: "Genesis 1:24"
+
+      - english: "beast / animal"
+
+        hebrew: "בְּהֵמָה"
+
+        transliteration: "behemah"
+
+        cross_reference: "Genesis 1:24"
+
+      - english: "creeping thing"
+
+        hebrew: "רֶמֶשׂ"
+
+        transliteration: "remes"
+
+        cross_reference: "Genesis 1:24"
+
+      - english: "it was good"
+
+        hebrew: "כִּי־טוֹב"
+
+        transliteration: "ki tov"
+
+        ipa: "/ki tov/"
+
+  - reference: "1:26"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "Let us make"
+
+        hebrew: "נַעֲשֶׂה"
+
+        transliteration: "na'aseh"
+
+        footnote: plural-image-language
+
+      - english: "man / humankind"
+
+        hebrew: "אָדָם"
+
+        transliteration: "adam"
+
+        footnote: adam-forward-reference
+
+      - english: "in our image"
+
+        hebrew: "בְּצַלְמֵנוּ"
+
+        transliteration: "betzalmenu"
+
+        footnote: plural-image-language
+
+      - english: "like us / according to our likeness"
+
+        hebrew: "כִּדְמוּתֵנוּ"
+
+        transliteration: "kidmutenu"
+
+        footnote: plural-image-language
+
+    cross_references:
+
+      - "Genesis 1:27"
+
+      - "Genesis 2:7"
+
+  - reference: "1:27"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "created"
+
+        hebrew: "בָּרָא"
+
+        transliteration: "bara"
+
+        ipa: "/baˈʁa/"
+
+        cross_reference: "Genesis 1:1"
+
+      - english: "the human"
+
+        hebrew: "הָאָדָם"
+
+        transliteration: "ha-adam"
+
+        cross_reference: "Genesis 1:26; Genesis 2:7"
+
+      - english: "in his image"
+
+        hebrew: "בְּצַלְמוֹ"
+
+        transliteration: "betzalmo"
+
+        footnote: singular-plural-1-27
+
+      - english: "in the image of God"
+
+        hebrew: "בְּצֶלֶם אֱלֹהִים"
+
+        transliteration: "betzelem Elohim"
+
+      - english: "male and female he created them"
+
+        hebrew: "זָכָר וּנְקֵבָה בָּרָא אֹתָם"
+
+        transliteration: "zakhar u-neqevah bara otam"
+
+        footnote: singular-plural-1-27
+
+    cross_references:
+
+      - "Genesis 1:26"
+
+  - reference: "1:28"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "be fruitful"
+
+        hebrew: "פְּרוּ"
+
+        transliteration: "peru"
+
+        cross_reference: "Genesis 1:22"
+
+      - english: "and multiply"
+
+        hebrew: "וּרְבוּ"
+
+        transliteration: "urvu"
+
+        cross_reference: "Genesis 1:22"
+
+      - english: "fill"
+
+        hebrew: "מִלְאוּ"
+
+        transliteration: "mil'u"
+
+      - english: "subdue it"
+
+        hebrew: "כִבְשֻׁהָ"
+
+        transliteration: "kivshuha"
+
+        footnote: kavash-radah
+
+      - english: "have dominion / rule"
+
+        hebrew: "רְדוּ"
+
+        transliteration: "redu"
+
+        footnote: kavash-radah
+
+  - reference: "1:29"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "seed"
+
+        hebrew: "זֶרַע"
+
+        transliteration: "zera"
+
+        ipa: "/ˈze.ʁa/"
+
+        cross_reference: "Genesis 1:11–12"
+
+      - english: "food"
+
+        hebrew: "אָכְלָה"
+
+        transliteration: "okhlah"
+
+        lexical_relation:
+
+          hebrew: "אָכַל"
+
+          transliteration: "akhal"
+
+          meaning: "to eat"
+
+  - reference: "1:30"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+      - english: "life / living being"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "food"
+
+        hebrew: "אָכְלָה"
+
+        transliteration: "okhlah"
+
+        cross_reference: "Genesis 1:29"
+
+  - reference: "1:31"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "everything that he had made"
+
+      - english: "very good"
+
+        hebrew: "טוֹב מְאֹד"
+
+        transliteration: "tov me'od"
+
+        footnote: tov-meod
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+        ipa: "/ˈe.ʁev/"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+        ipa: "/ˈbo.keʁ/"
+
+      - english: "the sixth day"
+
+        hebrew: "יוֹם הַשִּׁשִּׁי"
+
+        transliteration: "yom hashishi"
+
+# ============================================================
+
+# LEXICAL / NUMBERED FOOTNOTES
+
+# ============================================================
+
+lexical_notes:
+
+  bara:
+
+    title: "bara"
+
+    text: >
+
+      Bara means "created." The verb itself does not specify
+
+      creation from nothing, creatio ex nihilo. Whether Genesis
+
+      teaches creation ex nihilo is a larger interpretive and
+
+      theological question, not part of the lexical meaning of bara.
+
+  shamayim-dual-skies:
+
+    title: "shamayim — dual-skies hypothesis"
+
+    status: hypothesis
+
+    text: >
+
+      Shamayim has a form historically associated with the Hebrew
+
+      dual. The Illuminated Bible proposes as a hypothesis that this
+
+      may be understood as "dual skies": the sky above and the sky
+
+      below, together comprising the celestial sphere, with the
+
+      observer's horizon dividing that sphere into an upper and a
+
+      lower hemisphere. This is an interpretive hypothesis, not a
+
+      proposed translation of shamayim, and the grammatical form
+
+      alone does not establish it. Genesis 1:8 is particularly
+
+      significant because the text says that God calls the raqia
+
+      shamayim.
+
+    cross_references:
+
+      - "Isaiah 40:22 — chug"
+
+      - "Job 26:10 — chug"
+
+      - "Job 26:7"
+
+    caution: >
+
+      These passages are offered as parallels for consideration,
+
+      not as proof of the hypothesis.
+
+  tohu-va-vohu:
+
+    title: "tohu va-vohu"
+
+    text: >
+
+      Tohu occurs elsewhere in biblical Hebrew with senses involving
+
+      emptiness, waste, desolation, or formlessness. Bohu is much
+
+      rarer and occurs only in association with tohu in the Hebrew
+
+      Bible. The unusual pairing therefore deserves attention as a
+
+      compact and memorable expression.
+
+    cross_references:
+
+      - "Isaiah 34:11"
+
+      - "Jeremiah 4:23"
+
+  ruach-elohim:
+
+    title: "ruach Elohim"
+
+    text: >
+
+      Ruach can mean "spirit," "wind," or "breath." Accordingly,
+
+      ruach Elohim has a range of possible resonance broader than
+
+      the English "God's Spirit." "Breath of God" reflects an
+
+      important sense of ruach, though it is not necessarily the
+
+      translation intended here.
+
+  yehi-or:
+
+    title: "yehi or, vayehi or"
+
+    text: >
+
+      Yehi or, vayehi or is remarkably terse and poetic. The repeated
+
+      or, "light," and the closely balanced verbal forms give the
+
+      Hebrew a compactness difficult to reproduce in English.
+
+      "Shine—and shine was" is not intended as a translation of the
+
+      Hebrew, but only as an illustration of its concision,
+
+      repetition, and poetic force.
+
+  yom-echad:
+
+    title: "yom echad"
+
+    text: >
+
+      Genesis 1:5 uses yom echad, literally "one day" or "day one,"
+
+      rather than an ordinary ordinal expression meaning "first day."
+
+      Unlike the subsequent numbered days, which use ordinal numbers,
+
+      the first is called yom echad. The reason for this distinctive
+
+      construction is uncertain.
+
+    cross_references:
+
+      - "Genesis 1:8 — yom sheni"
+
+      - "Genesis 1:13 — yom shelishi"
+
+  raqia:
+
+    title: "raqia"
+
+    text: >
+
+      Raqia is the expanse separating waters below from waters above.
+
+      Genesis 1:8 states that God calls the raqia shamayim. The
+
+      precise physical conception represented by raqia is debated.
+
+  moadim:
+
+    title: "mo'adim"
+
+    text: >
+
+      Mo'adim has a semantic range including appointed times,
+
+      appointed occasions, or fixed times. The English foundation
+
+      may retain "seasons" while the illumination exposes the
+
+      broader Hebrew range.
+
+  sun-moon-naming:
+
+    title: "the greater light and the lesser light"
+
+    text: >
+
+      Biblical Hebrew possesses ordinary words for the sun and moon:
+
+      shemesh and yareach. Genesis 1:16 does not use those names.
+
+      Instead it describes them as the greater light and the lesser
+
+      light. The stars, by contrast, are called by the ordinary word
+
+      kokhavim.
+
+    interpretation:
+
+      status: hypothesis
+
+      text: >
+
+        The avoidance of the ordinary names for sun and moon may be
+
+        significant in the ancient Near Eastern religious context
+
+        and may contribute to the presentation of these celestial
+
+        bodies as created objects rather than divine beings.
+
+    cross_references:
+
+      - "Deuteronomy 4:19"
+
+      - "Psalm 136:7–9"
+
+  raqia-shamayim:
+
+    title: "raqia and shamayim"
+
+    text: >
+
+      Genesis 1:8 says that God called the raqia shamayim. Yet
+
+      Genesis 1:14, 1:15, and 1:17 subsequently use the fuller
+
+      construction birqia hashamayim, "in the expanse of the
+
+      heavens." Raqia and shamayim therefore overlap closely in
+
+      Genesis 1 but should not automatically be treated as perfectly
+
+      interchangeable lexical synonyms.
+
+    inquiry: >
+
+      What relationship does Genesis intend between the named realm
+
+      shamayim and the raqia associated with it?
+
+    status: open_question
+
+  nefesh-chayah:
+
+    title: "nefesh chayah"
+
+    text: >
+
+      Nefesh chayah is commonly translated "living creature" or
+
+      "living being." Nefesh has a broader biblical range than
+
+      the English word "creature" suggests and may elsewhere be
+
+      rendered being, life, person, or soul. Genesis itself
+
+      provides important cross-references. Genesis 1:24 again
+
+      uses nefesh chayah for land creatures, while Genesis 2:7
+
+      applies the same expression to the human after God breathes
+
+      into him the breath of life. The Hebrew connection should
+
+      be exposed without implying that every occurrence of nefesh
+
+      carries every later theological meaning associated with the
+
+      English word "soul."
+
+    cross_references:
+
+      - "Genesis 1:24"
+
+      - "Genesis 2:7"
+
+  tanninim:
+
+    title: "tanninim"
+
+    text: >
+
+      Tanninim has a broader biblical range than the English
+
+      "sea creatures." Elsewhere tannin can designate great
+
+      serpentine, dragon-like, or formidable creatures. The
+
+      immediate translation should remain appropriate to its
+
+      context while the illumination exposes the richer Hebrew
+
+      vocabulary.
+
+  peru-urvu:
+
+    title: "peru urvu"
+
+    text: >
+
+      Peru urvu is a compact two-part formula. Peru comes from
+
+      parah, "to bear fruit" or "be fruitful." Urvu comes from
+
+      ravah, "to become many," "increase," or "multiply." The
+
+      verbs complement rather than merely duplicate one another:
+
+      bear fruit; become many.
+
+    cross_references:
+
+      - "Genesis 1:22"
+
+      - "Genesis 1:28"
+
+  behemah-behemoth:
+
+    title: "behemah, Behemoth, and English behemoth"
+
+    text: >
+
+      Behemah is broader than the modern English agricultural
+
+      category "livestock." Depending on context, it can denote
+
+      an animal or beast, often particularly a larger quadruped
+
+      and frequently a domesticated animal. The word is directly
+
+      related to Behemoth, behemot, the extraordinary creature
+
+      described in Job 40:15. English subsequently borrowed
+
+      biblical Behemoth as "behemoth," now used for something
+
+      extraordinarily large, massive, formidable, or powerful.
+
+    cross_references:
+
+      - "Job 40:15"
+
+  plural-image-language:
+
+    title: "Let us make — our image — our likeness"
+
+    text: >
+
+      The Hebrew plurals are real. Na'aseh means "let us make";
+
+      betzalmenu, "in our image"; and kidmutenu, "according to
+
+      our likeness." The grammar therefore raises the question:
+
+      to whom does the "us" refer? Interpretations have included
+
+      God addressing a heavenly or divine council, while
+
+      Christian readers have historically perceived Trinitarian
+
+      significance in the wording. The grammar itself does not
+
+      determine among theological or historical interpretations.
+
+      Verse 27 makes the question still more striking because the
+
+      language returns to the singular: Elohim created the human
+
+      in his image.
 
     principle: >
 
       Illumination may raise questions the text itself does not answer.
 
+    cross_references:
+
+      - "Genesis 1:27"
+
+  adam-forward-reference:
+
+    title: "adam"
+
+    text: >
+
+      Here adam can mean "human" or "humankind"; it need not yet
+
+      function as the personal name Adam. Compare Genesis 2:7,
+
+      where ha-adam, "the human," is formed from ha-adamah,
+
+      "the ground." The fuller adam-adamah wordplay should be
+
+      illuminated there.
+
+    cross_references:
+
+      - "Genesis 2:7"
+
+  singular-plural-1-27:
+
+    title: "singular and plural in Genesis 1:27"
+
+    text: >
+
+      Genesis 1:26 says, "Let us make ... in our image ...
+
+      according to our likeness." Verse 27 returns to singular
+
+      grammar: "Elohim created ... in his image." A second
+
+      grammatical movement occurs within verse 27 itself. The
+
+      text first speaks of ha-adam, "the human," in the singular,
+
+      and concludes zakhar u-neqevah bara otam, "male and female
+
+      he created them." The illumination exposes these movements
+
+      without requiring a particular interpretation.
+
+    cross_references:
+
+      - "Genesis 1:26"
+
+  kavash-radah:
+
+    title: "kavash and radah"
+
+    text: >
+
+      Kavash means to subdue, subject, or bring under control.
+
+      The force of "subdue" is therefore present in the Hebrew
+
+      rather than being merely an English embellishment. Radah
+
+      means to rule, govern, or exercise dominion over. The
+
+      lexical meanings should be presented before modern
+
+      interpretations are imposed upon them. The words themselves
+
+      neither require an exploitative interpretation nor erase
+
+      the strength of the authority expressed.
+
+  tov-meod:
+
+    title: "tov me'od"
+
+    text: >
+
+      The repeated creation judgment tov, "good," is intensified
+
+      at the completion of the chapter to tov me'od, "very good."
+
+      The illumination should make that culmination visible.
+
+# ============================================================
+
+# HISTORICAL / LITERARY NOTES
+
+# ============================================================
+
+historical_context:
+
+  genesis_1_14:
+
+    statement: >
+
+      Genesis 1:14 belongs to an ancient Near Eastern cultural world
+
+      in which observation of celestial phenomena was important for
+
+      calendars, appointed times, omens, and religious practice.
+
+    contrast: >
+
+      Genesis assigns the heavenly lights functions involving signs,
+
+      appointed times, days, and years while presenting those lights
+
+      as created objects under Elohim rather than as independent
+
+      deities.
+
+    caution: >
+
+      This historical comparison does not by itself establish that
+
+      Genesis borrowed from any particular Babylonian text.
+
+    related_tradition:
+
+      - "Mesopotamian astral traditions"
+
+      - "Babylonian astronomical and astrological traditions"
+
+      - "Enuma Elish"
+
+# ============================================================
+
+# EDITORIAL RULES
+
+# ============================================================
+
+editorial_rules:
+
+  english_foundation:
+
+    default: Basic English
+
+    alternate: WEB
+
     rule: >
 
-      When linguistic, grammatical, historical, or literary features raise
+      The Bible in Basic English is the normal English foundation.
 
-      a significant question, The Illuminated Bible may explicitly identify
+      Its deliberately simple language leaves room for the original
 
-      that question. Such questions must be presented as hypotheses or
+      language to do the illuminating. The World English Bible is
 
-      inquiries, not as conclusions established by the text.
+      used selectively where its phrasing is clearer, more graceful,
 
-    authorship_neutrality: >
+      or better preserves a feature important to the original text.
 
-      Historical or linguistic hypotheses should not require the reader to
+      Basic English is therefore the foundation; the WEB appears
 
-      adopt a particular theory of biblical authorship. Evidence from the
+      when it earns its place.
 
-      text is presented first; competing interpretations may then be
+  illumination:
 
-      considered.
+    structure: inline
+
+    order:
+
+      - english
+
+      - original_script
+
+      - transliteration
+
+      - ipa
+
+    principle: >
+
+      The complete English foundation verse remains readable as
+
+      continuous prose. Selected English words or phrases are expanded
+
+      inline with original-language information. Illumination must
+
+      never replace the verse with a glossary or interlinear display.
+
+    repeat_policy: >
+
+      If a word or phrase merits illumination, illuminate it again
+
+      when it recurs. Each verse must be capable of serving as the
+
+      reader's first encounter with The Illuminated Bible.
+
+    genesis_1_density: relatively_dense
+
+  english_descendants:
+
+    rule: >
+
+      When an illuminated Hebrew word has produced or directly
+
+      influenced a recognizable English word, identify the
+
+      connection when it genuinely helps the reader understand
+
+      or remember the Hebrew.
+
+    example: "behemah → Behemoth → English 'behemoth'"
+
+  cross_references:
+
+    rule: >
+
+      Once a substantial lexical note has been established, later
+
+      occurrences should normally cross-reference that note rather
+
+      than reproduce it in full.
+
+  interpretive_questions:
+
+    rule: >
+
+      When Hebrew grammar or vocabulary exposes a significant
+
+      question, make the linguistic evidence visible before
+
+      presenting interpretations. Illumination may raise questions
+
+      the text itself does not answer.
 
   historical_context:
 
     rule: >
 
-      Ancient Near Eastern historical context may be supplied when it helps
+      Ancient Near Eastern historical context may be supplied when
 
-      illuminate language, imagery, or literary choices. Historical context
+      it helps illuminate language, imagery, or literary choices.
 
-      must remain distinct from lexical meaning and must not be presented as
+      Historical context must remain distinct from lexical meaning
 
-      proof of literary dependence unless the evidence warrants it.
+      and must not be presented as proof of literary dependence
+
+      unless the evidence warrants it.
+
+  interpretation:
+
+    governing_principle: >
+
+      Distinguish what the original-language text says from later
+
+      interpretations, doctrines, and debates. Illuminate the
+
+      language first; allow interpretation to follow.
+
+    hypotheses:
+
+      labeling_required: true
+
+  layout_integrity:
+
+    rule: >
+
+      Layout must yield to approved content, never the reverse.
+
+      Approved illumination and footnotes must not be abbreviated,
+
+      paraphrased, or deleted merely to make material fit.
+
+# ============================================================
+
+# GENESIS-SPECIFIC RULES
+
+# ============================================================
 
 genesis_specific_rules:
 
@@ -496,9 +1992,9 @@ genesis_specific_rules:
 
         When God occurs inside a larger illuminated phrase, such as
 
-        "God's Spirit" / "ruach Elohim", illuminate the larger phrase as
+        "God's Spirit" / "ruach Elohim", illuminate the larger phrase
 
-        a single unit.
+        as a single unit.
 
     light:
 
@@ -524,1471 +2020,43 @@ genesis_specific_rules:
 
       illuminate_all_relevant_occurrences: true
 
-  genesis_1_1:
-
-    illuminate:
-
-      - "In the beginning"
-
-      - "God"
-
-      - "created"
-
-      - "the heaven and the earth"
-
-    title_connection:
-
-      phrase: "In the beginning"
-
-      hebrew_title: "Bereshit"
-
-    elohim_bara_inquiry:
-
-      status: open_question
-
-      observation: >
-
-        Elohim is morphologically plural in form, while bara, "created,"
-
-        is grammatically singular. In the received Hebrew text, Elohim
-
-        therefore functions here as a singular actor.
-
-      inquiry: >
-
-        Illuminating the plural form Elohim beside the singular verb bara
-
-        raises a historical question: what, if anything, might this
-
-        combination tell us about the linguistic or religious history
-
-        behind the received Hebrew text?
-
-      limitation: >
-
-        The grammatical evidence does not establish an earlier reading
-
-        meaning "gods created," nor does it by itself reconstruct an
-
-        earlier oral tradition.
-
-      principle: >
-
-        The illumination raises the question; it does not provide an answer.
-
-  genesis_1_2:
-
-    illuminate_as_single_phrase:
-
-      - "God's Spirit"
-
   genesis_1_3:
 
     illuminate_as_single_phrase:
 
       - "Let there be light, and there was light"
 
-    footnote_rule: >
+  genesis_1_11_12:
 
-      Explain the remarkable terseness and poetic repetition of
+    rule: >
 
-      "yehi or, vayehi or". "Shine—and shine was" may be used only as an
+      Preserve the deliberate lexical repetition between verses
 
-      illustration of the poetry and must be explicitly identified as
-
-      not being a translation.
-
-  genesis_1_5:
-
-    illuminate:
-
-      - "the first day"
-
-    note:
-
-      transliteration: "yom echad"
-
-      explanation: >
-
-        The Hebrew is closer to "one day" or "day one" than to the ordinary
-
-        Hebrew ordinal "first."
-
-    yom_echad:
-
-      observation: >
-
-        Genesis 1:5 uses yom echad, literally "one day" or "day one,"
-
-        rather than an ordinary ordinal expression meaning "first day."
-
-      contrast:
-
-        - reference: "Genesis 1:8"
-
-          form: "yom sheni"
-
-          meaning: "second day"
-
-        - reference: "Genesis 1:13"
-
-          form: "yom shelishi"
-
-          meaning: "third day"
-
-      note: >
-
-        Unlike the subsequent numbered days, which use ordinal numbers,
-
-        the first is called yom echad, "one day." The reason for this
-
-        distinctive construction is uncertain.
-
-  genesis_1_6_to_8:
-
-    raqia:
-
-      illuminate: true
-
-      note: >
-
-        Raqia is the expanse separating waters below from waters above.
-
-        Genesis 1:8 states that God calls the raqia shamayim.
-
-        The precise physical conception represented by raqia is debated.
-
-  shamayim:
-
-    dual_skies_hypothesis:
-
-      status: hypothesis
-
-      statement: >
-
-        The Illuminated Bible proposes that the historically dual-shaped
-
-        form shamayim may resonate with "dual skies": the sky above and the
-
-        sky below, together comprising the celestial sphere, with the
-
-        observer's horizon dividing that sphere into an upper and a lower
-
-        hemisphere.
-
-      caution: >
-
-        This is an interpretive hypothesis, not a proposed translation of
-
-        shamayim, and the grammatical form alone does not establish it.
-
-      cross_references:
-
-        - reference: "Isaiah 40:22"
-
-          term: "chug"
-
-        - reference: "Job 26:10"
-
-          term: "chug"
-
-        - reference: "Job 26:7"
-
-          term: null
-
-      cross_reference_note: >
-
-        These passages are parallels for consideration, not proof of the
-
-        dual-skies hypothesis.
-
-  genesis_1_11:
-
-    illumination:
-
-      density: dense
-
-      terms:
-
-        - english: "God"
-
-          transliteration: "Elohim"
-
-        - english: "earth"
-
-          transliteration: "eretz"
-
-        - english: "grass / vegetation"
-
-        - english: "herbs yielding seed"
-
-        - english: "seed"
-
-        - english: "fruit trees"
-
-        - english: "fruit"
-
-        - english: "after their kind"
-
-    recurring_phrase:
-
-      english: "after their kind"
-
-      rule: >
-
-        Establish the Hebrew expression here and illuminate it consistently
-
-        when it recurs in the creation account.
-
-  genesis_1_12:
-
-    principle: >
-
-      Preserve the deliberate lexical repetition between verses 11 and 12.
-
-    illumination:
-
-      - "earth"
-
-      - "grass / vegetation"
-
-      - "herbs yielding seed"
-
-      - "seed"
-
-      - "after their kind"
-
-      - "trees bearing fruit"
-
-      - "fruit"
-
-      - "God"
-
-      - "it was good"
-
-    recurring_refrain:
-
-      english: "it was good"
-
-      transliteration: "ki tov"
-
-  genesis_1_13:
-
-    illumination:
-
-      - english: "evening"
-
-        transliteration: "erev"
-
-      - english: "morning"
-
-        transliteration: "boqer"
-
-      - english: "a third day"
-
-        transliteration: "yom shelishi"
-
-    cross_reference:
-
-      target: "Genesis 1:5"
-
-      purpose: >
-
-        Make visible the contrast between yom echad, "one day," and the
-
-        later ordinal forms.
-
-  genesis_1_14:
-
-    illumination:
-
-      density: dense
-
-      terms:
-
-        - english: "God"
-
-          transliteration: "Elohim"
-
-        - english: "lights"
-
-          transliteration: "me'orot"
-
-        - english: "expanse"
-
-          transliteration: "raqia"
-
-        - english: "sky / heavens"
-
-          transliteration: "shamayim"
-
-        - english: "day"
-
-          transliteration: "yom"
-
-        - english: "night"
-
-          transliteration: "layla"
-
-        - english: "signs"
-
-        - english: "seasons / appointed times"
-
-          transliteration: "mo'adim"
-
-        - english: "days"
-
-        - english: "years"
-
-    moadim_note:
-
-      type: lexical
-
-      statement: >
-
-        Mo'adim has a semantic range including appointed times,
-
-        appointed occasions, or fixed times. The WEB translation
-
-        "seasons" should remain in the foundation text, while the
-
-        illumination and footnote expose the broader Hebrew range.
-
-    astronomical_context:
-
-      type: historical_context
-
-      statement: >
-
-        Genesis 1:14 belongs to an ancient Near Eastern cultural world in
-
-        which observation of celestial phenomena was important for calendars,
-
-        appointed times, omens, and religious practice.
-
-      contrast: >
-
-        Genesis assigns the heavenly lights functions involving signs,
-
-        appointed times, days, and years while presenting those lights as
-
-        created objects under Elohim rather than as independent deities.
-
-      caution: >
-
-        This historical comparison does not by itself establish that Genesis
-
-        borrowed from any particular Babylonian text.
-
-      related_tradition:
-
-        - "Mesopotamian astral traditions"
-
-        - "Babylonian astronomical and astrological traditions"
-
-        - "Enuma Elish"
-
-    astronomy_editorial_note: >
-
-      The Illuminated Bible may give particular attention to astronomical
-
-      vocabulary where the biblical text engages the celestial concepts of
-
-      its ancient cultural environment.
+      11 and 12.
 
   genesis_1_15:
 
-    illumination:
+    rule: >
 
-      - english: "lights"
+      Illuminate both "lights" and "give light" so the reader can
 
-        transliteration: "me'orot"
+      see and hear the Hebrew relationship between the noun and
 
-      - english: "expanse"
-
-        transliteration: "raqia"
-
-      - english: "sky / heavens"
-
-        transliteration: "shamayim"
-
-      - english: "give light"
-
-      - english: "earth"
-
-        transliteration: "eretz"
-
-    poetic_observation: >
-
-      Illuminate both "lights" and "give light" so that the reader can see
-
-      and hear the Hebrew relationship between the noun and the associated
-
-      verbal expression.
-
-  genesis_1_16:
-
-    illumination:
-
-      density: dense
-
-      terms:
-
-        - english: "God"
-
-          transliteration: "Elohim"
-
-        - english: "two great lights"
-
-        - english: "greater light"
-
-        - english: "rule the day"
-
-        - english: "lesser light"
-
-        - english: "rule the night"
-
-        - english: "stars"
-
-          transliteration: "kokhavim"
-
-    naming_observation:
-
-      type: lexical_literary
-
-      statement: >
-
-        Biblical Hebrew possesses ordinary words for the sun and moon:
-
-        shemesh and yareach. Genesis 1:16 does not use those names.
-
-        Instead it describes them as the greater light and the lesser light.
-
-        The stars, by contrast, are called by the ordinary word kokhavim.
-
-    interpretation:
-
-      status: hypothesis
-
-      statement: >
-
-        The avoidance of the ordinary names for sun and moon may be
-
-        significant in the ancient Near Eastern religious context and may
-
-        contribute to the presentation of these celestial bodies as created
-
-        objects rather than divine beings.
-
-      caution: >
-
-        The lexical fact is the naming difference. The reason for that
-
-        difference remains interpretive.
-
-    cross_references:
-
-      - reference: "Deuteronomy 4:19"
-
-        importance: primary
-
-        note: >
-
-          Within the Torah, Deuteronomy explicitly names the sun, moon,
-
-          and stars while warning against worshiping them. Compare its use
-
-          of shemesh, yareach, and kokhavim with the wording of Genesis 1:16.
-
-      - reference: "Psalm 136:7-9"
-
-        importance: secondary
-
-        note: >
-
-          Compare the later biblical description of the great lights,
-
-          the sun governing the day, and the moon and stars governing
-
-          the night.
-
-    concordance_rule: >
-
-      Where useful, cross-reference ordinary occurrences of shemesh and
-
-      yareach separately from occurrences of the "greater light" and
-
-      "lesser light" terminology so readers can evaluate the distinctiveness
-
-      of Genesis 1:16 for themselves.
-
-  genesis_1_17:
-
-    foundation: BBE
-
-    illumination:
-
-      - english: "God"
-
-        transliteration: "Elohim"
-
-      - english: "set them"
-
-      - english: "expanse"
-
-        transliteration: "raqia"
-
-      - english: "sky / heavens"
-
-        transliteration: "shamayim"
-
-      - english: "give light"
-
-      - english: "earth"
-
-        transliteration: "eretz"
-
-    raqia_shamayim_note:
-
-      type: lexical_literary
-
-      observation: >
-
-        Genesis 1:8 says that God called the raqia shamayim. Yet Genesis
-
-        1:14, 1:15, and 1:17 subsequently use the fuller construction
-
-        birqia hashamayim, "in the expanse of the heavens."
-
-      implication: >
-
-        Raqia and shamayim therefore overlap closely in Genesis 1 but should
-
-        not automatically be treated as perfectly interchangeable lexical
-
-        synonyms.
-
-      inquiry: >
-
-        What relationship does Genesis intend between the named realm
-
-        shamayim and the raqia associated with it?
-
-      status: open_question
-
-      dual_skies_connection: >
-
-        This distinction may be considered alongside the Illuminated Bible's
-
-        dual-skies hypothesis, but it does not by itself prove that
-
-        hypothesis.
+      associated verbal expression.
 
   genesis_1_18:
 
-    foundation: WEB
-
-    illumination:
-
-      principle: >
-
-        Preserve the repeated creation vocabulary and illuminate the language
-
-        of governing or ruling without implying divinity.
-
-      terms:
-
-        - english: "rule"
-
-        - english: "day"
-
-          transliteration: "yom"
-
-        - english: "night"
-
-          transliteration: "layla"
-
-        - english: "divide"
-
-        - english: "light"
-
-          transliteration: "or"
-
-        - english: "darkness"
-
-          transliteration: "choshekh"
-
-        - english: "God"
-
-          transliteration: "Elohim"
-
-        - english: "it was good"
-
-          transliteration: "ki tov"
-
-    rule_note:
-
-      statement: >
-
-        The language of "rule" describes the assigned governing function
-
-        of the celestial lights over day and night. Illumination should not
-
-        imply that the lights themselves possess divine status.
-
-genesis_1_19_31:
-
-  verses:
-
-    - reference: "1:19"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "evening"
-
-          hebrew: "עֶרֶב"
-
-          transliteration: "erev"
-
-          ipa: "/ˈe.ʁev/"
-
-        - english: "morning"
-
-          hebrew: "בֹּקֶר"
-
-          transliteration: "boqer"
-
-          ipa: "/ˈbo.keʁ/"
-
-        - english: "a fourth day"
-
-          hebrew: "יוֹם רְבִיעִי"
-
-          transliteration: "yom revi'i"
-
-      notes: []
-
-    - reference: "1:20"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "waters"
-
-          hebrew: "מַיִם"
-
-          transliteration: "mayim"
-
-          ipa: "/ˈma.jim/"
-
-        - english: "living creatures"
-
-          hebrew: "נֶפֶשׁ חַיָּה"
-
-          transliteration: "nefesh chayah"
-
-          ipa: "/ˈne.feʃ χaˈja/"
-
-          footnote: nefesh-chayah
-
-        - english: "earth"
-
-          hebrew: "אֶרֶץ"
-
-          transliteration: "eretz"
-
-          ipa: "/ˈe.ʁets/"
-
-        - english: "expanse"
-
-          hebrew: "רָקִיעַ"
-
-          transliteration: "raqia"
-
-          ipa: "/ʁaˈki.a/"
-
-          cross_reference: "Genesis 1:6–8"
-
-        - english: "sky"
-
-          hebrew: "שָׁמַיִם"
-
-          transliteration: "shamayim"
-
-          ipa: "/ʃaˈma.jim/"
-
-          cross_reference: "Genesis 1:1, 1:8"
-
-    - reference: "1:21"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "great sea creatures"
-
-          hebrew: "הַתַּנִּינִם הַגְּדֹלִים"
-
-          transliteration: "hattanninim hagedolim"
-
-          footnote: tanninim
-
-        - english: "living creature"
-
-          hebrew: "נֶפֶשׁ חַיָּה"
-
-          transliteration: "nefesh chayah"
-
-          cross_reference: "Genesis 1:20"
-
-        - english: "after their kind"
-
-          cross_reference: "Genesis 1:11–12"
-
-        - english: "it was good"
-
-          hebrew: "כִּי־טוֹב"
-
-          transliteration: "ki tov"
-
-          ipa: "/ki tov/"
-
-    - reference: "1:22"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "be fruitful"
-
-          hebrew: "פְּרוּ"
-
-          transliteration: "peru"
-
-          footnote: peru-urvu
-
-        - english: "and multiply"
-
-          hebrew: "וּרְבוּ"
-
-          transliteration: "urvu"
-
-          footnote: peru-urvu
-
-        - english: "earth"
-
-          hebrew: "אֶרֶץ"
-
-          transliteration: "eretz"
-
-          ipa: "/ˈe.ʁets/"
-
-      cross_references:
-
-        - "Genesis 1:28"
-
-    - reference: "1:23"
-
-      foundation: WEB
-
-      illuminated:
-
-        - english: "evening"
-
-          hebrew: "עֶרֶב"
-
-          transliteration: "erev"
-
-          ipa: "/ˈe.ʁev/"
-
-        - english: "morning"
-
-          hebrew: "בֹּקֶר"
-
-          transliteration: "boqer"
-
-          ipa: "/ˈbo.keʁ/"
-
-        - english: "a fifth day"
-
-          hebrew: "יוֹם חֲמִישִׁי"
-
-          transliteration: "yom chamishi"
-
-      notes: []
-
-    - reference: "1:24"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "earth"
-
-          hebrew: "אֶרֶץ"
-
-          transliteration: "eretz"
-
-          ipa: "/ˈe.ʁets/"
-
-        - english: "living creatures"
-
-          hebrew: "נֶפֶשׁ חַיָּה"
-
-          transliteration: "nefesh chayah"
-
-          cross_reference: "Genesis 1:20"
-
-        - english: "livestock / beasts"
-
-          hebrew: "בְּהֵמָה"
-
-          transliteration: "behemah"
-
-          footnote: behemah-behemoth
-
-        - english: "creeping things"
-
-          hebrew: "רֶמֶשׂ"
-
-          transliteration: "remes"
-
-        - english: "after their kind"
-
-          cross_reference: "Genesis 1:11–12"
-
-    - reference: "1:25"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "after their kind"
-
-          cross_reference: "Genesis 1:24"
-
-        - english: "beast / animal"
-
-          hebrew: "בְּהֵמָה"
-
-          transliteration: "behemah"
-
-          cross_reference: "Genesis 1:24"
-
-        - english: "creeping thing"
-
-          hebrew: "רֶמֶשׂ"
-
-          transliteration: "remes"
-
-          cross_reference: "Genesis 1:24"
-
-        - english: "it was good"
-
-          hebrew: "כִּי־טוֹב"
-
-          transliteration: "ki tov"
-
-          ipa: "/ki tov/"
-
-    - reference: "1:26"
-
-      foundation: WEB
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "Let us make"
-
-          hebrew: "נַעֲשֶׂה"
-
-          transliteration: "na'aseh"
-
-          footnote: plural-image-language
-
-        - english: "man / humankind"
-
-          hebrew: "אָדָם"
-
-          transliteration: "adam"
-
-          footnote: adam-forward-reference
-
-        - english: "in our image"
-
-          hebrew: "בְּצַלְמֵנוּ"
-
-          transliteration: "betzalmenu"
-
-          footnote: plural-image-language
-
-        - english: "like us / according to our likeness"
-
-          hebrew: "כִּדְמוּתֵנוּ"
-
-          transliteration: "kidmutenu"
-
-          footnote: plural-image-language
-
-      cross_references:
-
-        - "Genesis 1:27"
-
-        - "Genesis 2:7"
-
-    - reference: "1:27"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "created"
-
-          hebrew: "בָּרָא"
-
-          transliteration: "bara"
-
-          ipa: "/baˈʁa/"
-
-          cross_reference: "Genesis 1:1"
-
-        - english: "the human"
-
-          hebrew: "הָאָדָם"
-
-          transliteration: "ha-adam"
-
-          cross_reference: "Genesis 1:26; Genesis 2:7"
-
-        - english: "in his image"
-
-          hebrew: "בְּצַלְמוֹ"
-
-          transliteration: "betzalmo"
-
-          footnote: singular-plural-1-27
-
-        - english: "in the image of God"
-
-          hebrew: "בְּצֶלֶם אֱלֹהִים"
-
-          transliteration: "betzelem Elohim"
-
-        - english: "male and female he created them"
-
-          hebrew: "זָכָר וּנְקֵבָה בָּרָא אֹתָם"
-
-          transliteration: "zakhar u-neqevah bara otam"
-
-          footnote: singular-plural-1-27
-
-      cross_references:
-
-        - "Genesis 1:26"
-
-    - reference: "1:28"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "be fruitful"
-
-          hebrew: "פְּרוּ"
-
-          transliteration: "peru"
-
-          cross_reference: "Genesis 1:22"
-
-        - english: "and multiply"
-
-          hebrew: "וּרְבוּ"
-
-          transliteration: "urvu"
-
-          cross_reference: "Genesis 1:22"
-
-        - english: "fill"
-
-          hebrew: "מִלְאוּ"
-
-          transliteration: "mil'u"
-
-        - english: "subdue it"
-
-          hebrew: "כִבְשֻׁהָ"
-
-          transliteration: "kivshuha"
-
-          footnote: kavash-radah
-
-        - english: "have dominion / rule"
-
-          hebrew: "רְדוּ"
-
-          transliteration: "redu"
-
-          footnote: kavash-radah
-
-    - reference: "1:29"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "seed"
-
-          hebrew: "זֶרַע"
-
-          transliteration: "zera"
-
-          ipa: "/ˈze.ʁa/"
-
-          cross_reference: "Genesis 1:11–12"
-
-        - english: "food"
-
-          hebrew: "אָכְלָה"
-
-          transliteration: "okhlah"
-
-          lexical_relation:
-
-            hebrew: "אָכַל"
-
-            transliteration: "akhal"
-
-            meaning: "to eat"
-
-    - reference: "1:30"
-
-      foundation: WEB
-
-      illuminated:
-
-        - english: "earth"
-
-          hebrew: "אֶרֶץ"
-
-          transliteration: "eretz"
-
-          ipa: "/ˈe.ʁets/"
-
-        - english: "life / living being"
-
-          hebrew: "נֶפֶשׁ חַיָּה"
-
-          transliteration: "nefesh chayah"
-
-          cross_reference: "Genesis 1:20"
-
-        - english: "food"
-
-          hebrew: "אָכְלָה"
-
-          transliteration: "okhlah"
-
-          cross_reference: "Genesis 1:29"
-
-    - reference: "1:31"
-
-      foundation: BBE
-
-      illuminated:
-
-        - english: "God"
-
-          hebrew: "אֱלֹהִים"
-
-          transliteration: "Elohim"
-
-          ipa: "/e.loˈhim/"
-
-        - english: "everything that he had made"
-
-        - english: "very good"
-
-          hebrew: "טוֹב מְאֹד"
-
-          transliteration: "tov me'od"
-
-          footnote: tov-meod
-
-        - english: "evening"
-
-          hebrew: "עֶרֶב"
-
-          transliteration: "erev"
-
-          ipa: "/ˈe.ʁev/"
-
-        - english: "morning"
-
-          hebrew: "בֹּקֶר"
-
-          transliteration: "boqer"
-
-          ipa: "/ˈbo.keʁ/"
-
-        - english: "the sixth day"
-
-          hebrew: "יוֹם הַשִּׁשִּׁי"
-
-          transliteration: "yom hashishi"
-
-  lexical_notes:
-
-    nefesh-chayah:
-
-      title: "nefesh chayah"
-
-      text: >
-
-        Nefesh chayah is commonly translated "living creature" or
-
-        "living being." Nefesh has a broader biblical range than
-
-        the English word "creature" suggests and may elsewhere be
-
-        rendered being, life, person, or soul. Genesis itself
-
-        provides important cross-references. Genesis 1:24 again
-
-        uses nefesh chayah for land creatures, while Genesis 2:7
-
-        applies the same expression to the human after God breathes
-
-        into him the breath of life. The Hebrew connection should
-
-        be exposed without implying that every occurrence of nefesh
-
-        carries every later theological meaning associated with the
-
-        English word "soul."
-
-      cross_references:
-
-        - "Genesis 1:24"
-
-        - "Genesis 2:7"
-
-    tanninim:
-
-      title: "tanninim"
-
-      text: >
-
-        Tanninim has a broader biblical range than the English
-
-        "sea creatures." Elsewhere tannin can designate great
-
-        serpentine, dragon-like, or formidable creatures. The
-
-        immediate translation should remain appropriate to its
-
-        context while the illumination exposes the richer Hebrew
-
-        vocabulary.
-
-    peru-urvu:
-
-      title: "peru urvu"
-
-      text: >
-
-        Peru urvu is a compact two-part formula. Peru comes from
-
-        parah, "to bear fruit" or "be fruitful." Urvu comes from
-
-        ravah, "to become many," "increase," or "multiply." The
-
-        verbs complement rather than merely duplicate one another:
-
-        bear fruit; become many.
-
-      cross_references:
-
-        - "Genesis 1:22"
-
-        - "Genesis 1:28"
-
-    behemah-behemoth:
-
-      title: "behemah, Behemoth, and English behemoth"
-
-      text: >
-
-        Behemah is broader than the modern English agricultural
-
-        category "livestock." Depending on context, it can denote
-
-        an animal or beast, often particularly a larger quadruped
-
-        and frequently a domesticated animal. The word is directly
-
-        related to Behemoth, behemot, the extraordinary creature
-
-        described in Job 40:15. English subsequently borrowed
-
-        biblical Behemoth as "behemoth," now used for something
-
-        extraordinarily large, massive, formidable, or powerful.
-
-      cross_references:
-
-        - "Job 40:15"
-
-    plural-image-language:
-
-      title: "Let us make — our image — our likeness"
-
-      text: >
-
-        The Hebrew plurals are real. Na'aseh means "let us make";
-
-        betzalmenu, "in our image"; and kidmutenu, "according to
-
-        our likeness." The grammar therefore raises the question:
-
-        to whom does the "us" refer? Interpretations have included
-
-        God addressing a heavenly or divine council, while
-
-        Christian readers have historically perceived Trinitarian
-
-        significance in the wording. The grammar itself does not
-
-        determine among theological or historical interpretations.
-
-        Verse 27 makes the question still more striking because the
-
-        language returns to the singular: Elohim created the human
-
-        in his image.
-
-      principle: >
-
-        Illumination may raise questions the text itself does not answer.
-
-      cross_references:
-
-        - "Genesis 1:27"
-
-    adam-forward-reference:
-
-      title: "adam"
-
-      text: >
-
-        Here adam can mean "human" or "humankind"; it need not yet
-
-        function as the personal name Adam. Compare Genesis 2:7,
-
-        where ha-adam, "the human," is formed from ha-adamah,
-
-        "the ground." The fuller adam-adamah wordplay should be
-
-        illuminated there.
-
-      cross_references:
-
-        - "Genesis 2:7"
-
-    singular-plural-1-27:
-
-      title: "singular and plural in Genesis 1:27"
-
-      text: >
-
-        Genesis 1:26 says, "Let us make ... in our image ...
-
-        according to our likeness." Verse 27 returns to singular
-
-        grammar: "Elohim created ... in his image." A second
-
-        grammatical movement occurs within verse 27 itself. The
-
-        text first speaks of ha-adam, "the human," in the singular,
-
-        and concludes zakhar u-neqevah bara otam, "male and female
-
-        he created them." The illumination exposes these movements
-
-        without requiring a particular interpretation.
-
-      cross_references:
-
-        - "Genesis 1:26"
-
-    kavash-radah:
-
-      title: "kavash and radah"
-
-      text: >
-
-        Kavash means to subdue, subject, or bring under control.
-
-        The force of "subdue" is therefore present in the Hebrew
-
-        rather than being merely an English embellishment. Radah
-
-        means to rule, govern, or exercise dominion over. The
-
-        lexical meanings should be presented before modern
-
-        interpretations are imposed upon them. The words themselves
-
-        neither require an exploitative interpretation nor erase
-
-        the strength of the authority expressed.
-
-    tov-meod:
-
-      title: "tov me'od"
-
-      text: >
-
-        The repeated creation judgment tov, "good," is intensified
-
-        at the completion of the chapter to tov me'od, "very good."
-
-        The illumination should make that culmination visible.
-
-design_extensions:
-
-  verse_table:
-
-    borders: invisible
-
     rule: >
 
-      The verse rows and columns remain structurally aligned, but all table
+      Preserve the repeated creation vocabulary and illuminate the
 
-      borders and ruler lines are invisible in the finished edition.
+      language of governing or ruling without implying divinity.
 
-      Typography and spacing, not visible rules, reveal the structure.
+# ============================================================
 
-  large_print:
+# ART / TYPOGRAPHY
 
-    scripture_font_size_points: 14
-
-    footnotes_large_print: true
-
-  spine:
-
-    book_title:
-
-      hebrew:
-
-        position: above_greek
-
-        alignment: centered
-
-      greek:
-
-        position: below_hebrew
-
-        alignment: centered
-
-    series_mark:
-
-      full_name: "The Illuminated Bible"
-
-      monogram: "IB"
-
-      phonetic_name: "India Bravo"
-
-      narrow_spine_rule: >
-
-        When "The Illuminated Bible" cannot be set comfortably on the spine,
-
-        use the IB monogram as the series mark.
-
-  title_page:
-
-    subtitle_display: false
-
-    rule: >
-
-      Display only the unvocalized Hebrew book title centered above the
-
-      Greek book title. Do not place "Restrained Art. Eternal Truth."
-
-      beneath the Greek title.
+# ============================================================
 
 art:
 
@@ -1996,39 +2064,47 @@ art:
 
   principle: >
 
-    Artwork should illuminate the biblical book rather than merely decorate
+    Artwork should illuminate the biblical book rather than merely
 
-    it. The text remains primary.
+    decorate it. The text remains primary.
 
-  genesis:
+  subjects:
 
-    subjects:
+    - creation
 
-      - creation
+    - light_and_darkness
 
-      - light_and_darkness
+    - expanse
 
-      - expanse
+    - waters_above_and_below
 
-      - waters_above_and_below
+    - earth_and_seas
 
-      - earth_and_seas
+    - garden_of_eden
 
-      - garden_of_eden
-
-      - Adam_and_Eve
+    - Adam_and_Eve
 
 typography:
 
   principle: >
 
-    Typography is an intentional part of the design rather than a technical
+    Typography is an intentional part of the design rather than a
 
-    fallback.
+    technical fallback.
 
-  english_scripture:
+  illuminated_english:
 
     category: book_serif
+
+    weight: bold
+
+    size_points: 14
+
+  comparison_english:
+
+    category: book_serif
+
+    weight: regular
 
     size_points: 14
 
@@ -2037,6 +2113,8 @@ typography:
     category: hebrew_serif
 
     preferred_face: "Noto Serif Hebrew"
+
+    direction: rtl
 
   greek:
 
@@ -2050,25 +2128,11 @@ typography:
 
     category: readable_sans_serif
 
-canonical_sources:
+# ============================================================
 
-  structured:
+# REVISION POLICY
 
-    - "bible.yaml"
-
-    - "genesis-1-1-10.yaml"
-
-  readable:
-
-    - "genesis-1-1-10.md"
-
-  rule: >
-
-    Mock-ups, PDFs, and artwork must be generated from canonical source files.
-
-    They must not silently alter approved text, illumination decisions,
-
-    footnotes, translation choices, or editorial rules.
+# ============================================================
 
 revision_policy:
 
@@ -2076,11 +2140,11 @@ revision_policy:
 
   rule: >
 
-    Once content or design decisions are approved, later revisions change
+    Once content or design decisions are approved, later revisions
 
-    only explicitly requested elements. Unrequested material carries forward
+    change only explicitly requested elements. Unrequested material
 
-    unchanged.
+    carries forward unchanged.
 
   shorthand: "No regressing."
 
