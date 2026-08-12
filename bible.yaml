@@ -12,7 +12,7 @@ illuminated_bible:
 
           chapter: 1
 
-          verses: "1-10"
+          verses: "1-31"
 
         - book: John
 
@@ -1019,6 +1019,70 @@ footnote_policy:
 genesis:
 
   chapter_1:
+
+    foundation_map:
+
+      1: BBE
+
+      2: WEB
+
+      3: WEB
+
+      4: WEB
+
+      5: WEB
+
+      6: WEB
+
+      7: WEB
+
+      8: WEB
+
+      9: WEB
+
+      10: WEB
+
+      11: WEB
+
+      12: WEB
+
+      13: WEB
+
+      14: WEB
+
+      15: WEB
+
+      16: WEB
+
+      17: WEB
+
+      18: WEB
+
+      19: BBE
+
+      20: WEB
+
+      21: WEB
+
+      22: BBE
+
+      23: BBE
+
+      24: WEB
+
+      25: BBE
+
+      26: BBE
+
+      27: BBE
+
+      28: BBE
+
+      29: BBE
+
+      30: WEB
+
+      31: BBE
 
     footnotes:
 
