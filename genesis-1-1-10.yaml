@@ -2,41 +2,49 @@
 
 #
 
-# Canonical source: Bereshit / Γένεσις 1:1–10
+# CANONICAL WORKING TEXT
 
-# Illuminated Bible Project
+# Bereshit / Γένεσις 1:1–10
 
 #
 
-# DISPLAY RULES
+# Approved after verse-by-verse editorial review.
+
+#
+
+# PAGE ARCHITECTURE
 
 # - Two unlabeled columns
 
-# - Left column: illuminated verse
+# - Left: illuminated text
 
-# - Right column: WEB comparison text
+# - Right: WEB comparison text
 
-# - Each illuminated verse identifies its own English foundation source
+# - English foundation is selected verse by verse
 
-# - Source abbreviation appears without brackets
-
-#
-
-# ILLUMINATION ORDER
-
-# English, Hebrew, Transliteration, IPA
+# - Foundation abbreviation follows the verse number without brackets
 
 #
 
-# Hebrew display is unpointed.
+# INLINE ILLUMINATION ORDER
+
+# English → Hebrew → Transliteration → IPA
+
+#
+
+# Hebrew is displayed without vowel points.
 
 # Pronunciation convention: Modern Israeli.
 
-# Exercise restraint.
+#
 
-# Only elements explicitly listed for a verse are illuminated,
+# EDITORIAL PRINCIPLE
 
-# except that "God" is always illuminated wherever it occurs.
+# Each verse must be capable of being the reader's first encounter
+
+# with the Illuminated Bible. A term that deserves illumination is
+
+# therefore illuminated again when it recurs.
 
 book:
 
@@ -86,19 +94,17 @@ illumination:
 
   pronunciation: modern_israeli
 
-  selection_policy: explicit_plus_global_rules
+  editorial_rules:
 
-  global_rules:
+    - "Each verse stands independently."
 
-    - english: "God"
+    - "Repeat an illumination when an illuminated term recurs."
 
-      hebrew: "אלהים"
+    - "Density is determined by the language and poetry of the passage."
 
-      transliteration: "Elohim"
+    - "Genesis 1 may appropriately receive relatively dense illumination."
 
-      ipa: "/e.loˈhim/"
-
-      always_illuminate: true
+    - "God is illuminated wherever it occurs, except when it forms part of a larger illuminated phrase such as God's Spirit."
 
 verses:
 
@@ -112,7 +118,7 @@ verses:
 
     illuminated:
 
-      text: "In the beginning God made the heaven and the earth."
+      text: "In the beginning God created the heaven and the earth."
 
       elements:
 
@@ -124,7 +130,7 @@ verses:
 
           ipa: "/be.reˈʃit/"
 
-          reason: "Opening Hebrew phrase and Hebrew title of the book"
+          reason: "Opening phrase and Hebrew title of the book"
 
         - english: "God"
 
@@ -134,15 +140,23 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+        - english: "created"
 
-        - english: "the heaven"
+          hebrew: "ברא"
 
-          hebrew: "שמים"
+          transliteration: "bara"
 
-          transliteration: "shamayim"
+          ipa: "/baˈʁa/"
 
-          ipa: "/ʃaˈma.jim/"
+          footnote: 1
+
+        - english: "the heaven and the earth"
+
+          hebrew: "את השמים ואת הארץ"
+
+          transliteration: "et hashamayim ve'et ha'aretz"
+
+          ipa: "/et ha.ʃaˈma.jim ve.et haˈa.ʁets/"
 
     web: "In the beginning, God created the heavens and the earth."
 
@@ -168,17 +182,29 @@ verses:
 
           ipa: "/ˈto.hu vaˈvo.hu/"
 
-          footnote: 1
+        - english: "Darkness"
 
-        - english: "God"
+          hebrew: "חשך"
 
-          hebrew: "אלהים"
+          transliteration: "choshekh"
 
-          transliteration: "Elohim"
+          ipa: "/ˈχo.ʃeχ/"
 
-          ipa: "/e.loˈhim/"
+        - english: "God’s Spirit"
 
-          rule: always_illuminate
+          hebrew: "רוח אלהים"
+
+          transliteration: "ruach Elohim"
+
+          ipa: "/ˈʁu.aχ e.loˈhim/"
+
+        - english: "waters"
+
+          hebrew: "מים"
+
+          transliteration: "mayim"
+
+          ipa: "/ˈma.jim/"
 
     web: "The earth was formless and empty. Darkness was on the surface of the deep, and God’s Spirit was hovering over the surface of the waters."
 
@@ -204,15 +230,13 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
-
-        - english: "Let there be light — and there was light"
+        - english: "Let there be light, and there was light"
 
           hebrew: "יהי אור ויהי אור"
 
-          transliteration: "yehi or — vayehi or"
+          transliteration: "yehi or, vayehi or"
 
-          ipa: "/jeˈhi or — va.jeˈhi or/"
+          ipa: "/jeˈhi oʁ va.jeˈhi oʁ/"
 
           footnote: 2
 
@@ -240,7 +264,17 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+          occurrences: all
+
+        - english: "light"
+
+          hebrew: "אור"
+
+          transliteration: "or"
+
+          ipa: "/oʁ/"
+
+          occurrences: all
 
         - english: "good"
 
@@ -250,7 +284,13 @@ verses:
 
           ipa: "/tov/"
 
-          footnote: 3
+        - english: "darkness"
+
+          hebrew: "חשך"
+
+          transliteration: "choshekh"
+
+          ipa: "/ˈχo.ʃeχ/"
 
     web: "God saw the light, and saw that it was good. God divided the light from the darkness."
 
@@ -276,17 +316,63 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+        - english: "light"
 
-        - english: "evening … morning"
+          hebrew: "אור"
 
-          hebrew: "ערב … בקר"
+          transliteration: "or"
 
-          transliteration: "erev … boqer"
+          ipa: "/oʁ/"
 
-          ipa: "/ˈe.rev … ˈbo.ker/"
+        - english: "day"
 
-          footnote: 4
+          hebrew: "יום"
+
+          transliteration: "yom"
+
+          ipa: "/jom/"
+
+        - english: "darkness"
+
+          hebrew: "חשך"
+
+          transliteration: "choshekh"
+
+          ipa: "/ˈχo.ʃeχ/"
+
+        - english: "night"
+
+          hebrew: "לילה"
+
+          transliteration: "layla"
+
+          ipa: "/ˈlaj.la/"
+
+        - english: "evening"
+
+          hebrew: "ערב"
+
+          transliteration: "erev"
+
+          ipa: "/ˈe.ʁev/"
+
+        - english: "morning"
+
+          hebrew: "בקר"
+
+          transliteration: "boqer"
+
+          ipa: "/ˈbo.keʁ/"
+
+        - english: "the first day"
+
+          hebrew: "יום אחד"
+
+          transliteration: "yom echad"
+
+          ipa: "/jom eˈχad/"
+
+          footnote: 3
 
     web: "God called the light “day,” and the darkness he called “night.” There was evening and there was morning, the first day."
 
@@ -312,17 +398,25 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
-
         - english: "expanse"
 
           hebrew: "רקיע"
 
           transliteration: "raqia"
 
-          ipa: "/raˈki.a/"
+          ipa: "/ʁaˈki.a/"
 
-          footnote: 5
+          footnote: 4
+
+        - english: "waters"
+
+          hebrew: "מים"
+
+          transliteration: "mayim"
+
+          ipa: "/ˈma.jim/"
+
+          occurrences: all
 
     web: "God said, “Let there be an expanse in the middle of the waters, and let it divide the waters from the waters.”"
 
@@ -348,7 +442,43 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+        - english: "expanse"
+
+          hebrew: "רקיע"
+
+          transliteration: "raqia"
+
+          ipa: "/ʁaˈki.a/"
+
+          occurrences: all
+
+        - english: "waters"
+
+          hebrew: "מים"
+
+          transliteration: "mayim"
+
+          ipa: "/ˈma.jim/"
+
+          occurrences: all
+
+        - english: "below"
+
+          hebrew: "מתחת"
+
+          transliteration: "mitachat"
+
+          ipa: "/miˈta.χat/"
+
+          display_replaces: "under"
+
+        - english: "above"
+
+          hebrew: "מעל"
+
+          transliteration: "me'al"
+
+          ipa: "/meˈal/"
 
     web: "God made the expanse, and divided the waters which were under the expanse from the waters which were above the expanse; and it was so."
 
@@ -374,7 +504,13 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+        - english: "expanse"
+
+          hebrew: "רקיע"
+
+          transliteration: "raqia"
+
+          ipa: "/ʁaˈki.a/"
 
         - english: "sky"
 
@@ -384,7 +520,23 @@ verses:
 
           ipa: "/ʃaˈma.jim/"
 
-          footnote: 6
+          reason: "God names the raqia shamayim"
+
+        - english: "evening"
+
+          hebrew: "ערב"
+
+          transliteration: "erev"
+
+          ipa: "/ˈe.ʁev/"
+
+        - english: "morning"
+
+          hebrew: "בקר"
+
+          transliteration: "boqer"
+
+          ipa: "/ˈbo.keʁ/"
 
     web: "God called the expanse “sky.” There was evening and there was morning, a second day."
 
@@ -410,7 +562,29 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+        - english: "waters"
+
+          hebrew: "מים"
+
+          transliteration: "mayim"
+
+          ipa: "/ˈma.jim/"
+
+        - english: "sky"
+
+          hebrew: "שמים"
+
+          transliteration: "shamayim"
+
+          ipa: "/ʃaˈma.jim/"
+
+        - english: "dry land"
+
+          hebrew: "יבשה"
+
+          transliteration: "yabashah"
+
+          ipa: "/ja.baˈʃa/"
 
     web: "God said, “Let the waters under the sky be gathered together to one place, and let the dry land appear”; and it was so."
 
@@ -436,17 +610,41 @@ verses:
 
           ipa: "/e.loˈhim/"
 
-          rule: always_illuminate
+          occurrences: all
 
-        - english: "earth … seas"
+        - english: "dry land"
 
-          hebrew: "ארץ … ימים"
+          hebrew: "יבשה"
 
-          transliteration: "eretz … yamim"
+          transliteration: "yabashah"
 
-          ipa: "/ˈe.rets … jaˈmim/"
+          ipa: "/ja.baˈʃa/"
 
-          footnote: 7
+        - english: "earth"
+
+          hebrew: "ארץ"
+
+          transliteration: "eretz"
+
+          ipa: "/ˈe.ʁets/"
+
+          reason: "Same Hebrew term used in Genesis 1:1"
+
+        - english: "seas"
+
+          hebrew: "ימים"
+
+          transliteration: "yamim"
+
+          ipa: "/jaˈmim/"
+
+        - english: "it was good"
+
+          hebrew: "כי טוב"
+
+          transliteration: "ki tov"
+
+          ipa: "/ki tov/"
 
     web: "God called the dry land “earth,” and the gathering together of the waters he called “seas.” God saw that it was good."
 
@@ -454,79 +652,61 @@ footnotes:
 
   - number: 1
 
-    term: "tohu va-vohu"
+    verse: 1
+
+    term: "bara"
 
     note: >
 
-      Tohu occurs elsewhere in Biblical Hebrew. Bohu is
+      Bara means “created.” The verb itself does not specify
 
-      exceptionally rare. Its scarcity is one reason the phrase
+      creation from nothing. Creation ex nihilo—“creation out
 
-      resists a simple one-to-one English equivalent.
+      of nothing”—is a larger interpretive and theological
+
+      question, not part of the lexical meaning of bara.
 
   - number: 2
 
-    term: "yehi or — vayehi or"
+    verse: 3
+
+    term: "yehi or, vayehi or"
 
     note: >
 
-      Or means “light.” “Let there be light — and there was light”
+      The Hebrew is remarkably terse and poetic. Its compression
 
-      is treated as one illuminated phrase because the Hebrew
+      might be suggested by “shine—and shine was.” This is not
 
-      command and fulfillment form a strikingly compressed poetic unit.
+      offered as a translation, but as an illustration of the
+
+      poetic force of the Hebrew.
 
   - number: 3
 
-    term: "tov"
+    verse: 5
+
+    term: "yom echad"
 
     note: >
 
-      Tov can carry senses including good, pleasing, fitting,
+      Yom echad is literally closer to “one day” or “day one”
 
-      or beneficial. The English “good” preserves that breadth.
+      than to the ordinary Hebrew ordinal “first.”
 
   - number: 4
 
-    term: "erev … boqer"
-
-    note: >
-
-      The evening-and-morning formula contributes to the recurring
-
-      cadence and structure of the creation account.
-
-  - number: 5
+    verse: 6
 
     term: "raqia"
 
     note: >
 
-      Raqia is variously rendered “expanse,” “firmament,” or “vault.”
+      Raqia is the expanse separating the waters below from the
 
-      The Hebrew illumination lets the reader see the term without
+      waters above. Genesis 1:8 says that God calls the raqia
 
-      forcing one English interpretation.
+      shamayim, “sky” or “heavens.” The precise physical
 
-  - number: 6
-
-    term: "shamayim"
-
-    note: >
-
-      Shamayim appears again here. Repeated Hebrew terms may be
-
-      illuminated when the repetition itself helps reveal the structure
-
-      of the passage.
-
-  - number: 7
-
-    term: "eretz … yamim"
-
-    note: >
-
-      The naming of earth and seas continues the chapter’s pattern
-
-      of separation, ordering, and naming.
+      conception represented by the term is debated.
 
