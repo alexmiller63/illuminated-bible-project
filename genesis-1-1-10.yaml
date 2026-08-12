@@ -2,31 +2,29 @@
 
 #
 
-# Canonical source: Bereshit (Genesis) 1:1–10
+# Canonical source: Bereshit / Γένεσις 1:1–10
 
 # Illuminated Bible Project
 
 #
 
-# Display:
+# DISPLAY RULES
 
-#   Two unlabeled columns
+# - Two unlabeled columns
 
-#   Left  = illuminated text
+# - Left column: illuminated verse
 
-#   Right = WEB reference text
+# - Right column: WEB comparison text
+
+# - Each illuminated verse identifies its own English foundation source
+
+# - Source abbreviation appears without brackets
 
 #
 
-# Illumination order:
+# ILLUMINATION ORDER
 
-#   English
-
-#   Hebrew
-
-#   Transliteration
-
-#   IPA
+# English, Hebrew, Transliteration, IPA
 
 #
 
@@ -34,9 +32,11 @@
 
 # Pronunciation convention: Modern Israeli.
 
-# Exercise restraint: only entries explicitly listed below
+# Exercise restraint.
 
-# are to be illuminated.
+# Only elements explicitly listed for a verse are illuminated,
+
+# except that "God" is always illuminated wherever it occurs.
 
 book:
 
@@ -62,6 +62,12 @@ layout:
 
   verse_numbers: superscript
 
+  source_label:
+
+    position: after_verse_number
+
+    brackets: false
+
   footnotes: numbered_bottom
 
 illumination:
@@ -80,19 +86,55 @@ illumination:
 
   pronunciation: modern_israeli
 
-  selection_policy: explicit_only
+  selection_policy: explicit_plus_global_rules
+
+  global_rules:
+
+    - english: "God"
+
+      hebrew: "אלהים"
+
+      transliteration: "Elohim"
+
+      ipa: "/e.loˈhim/"
+
+      always_illuminate: true
 
 verses:
 
   - verse: 1
 
-    foundation: BEB
+    foundation:
+
+      source: BEB
+
+      name: Basic English Bible
 
     illuminated:
 
       text: "In the beginning God made the heaven and the earth."
 
       elements:
+
+        - english: "In the beginning"
+
+          hebrew: "בראשית"
+
+          transliteration: "Bereshit"
+
+          ipa: "/be.reˈʃit/"
+
+          reason: "Opening Hebrew phrase and Hebrew title of the book"
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "the heaven"
 
@@ -102,13 +144,15 @@ verses:
 
           ipa: "/ʃaˈma.jim/"
 
-          footnote: 1
-
     web: "In the beginning, God created the heavens and the earth."
 
   - verse: 2
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
@@ -124,19 +168,43 @@ verses:
 
           ipa: "/ˈto.hu vaˈvo.hu/"
 
-          footnote: 2
+          footnote: 1
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
     web: "The earth was formless and empty. Darkness was on the surface of the deep, and God’s Spirit was hovering over the surface of the waters."
 
   - verse: 3
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God said, “Let there be light,” and there was light."
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "Let there be light — and there was light"
 
@@ -146,19 +214,33 @@ verses:
 
           ipa: "/jeˈhi or — va.jeˈhi or/"
 
-          footnote: 3
+          footnote: 2
 
     web: "God said, “Let there be light,” and there was light."
 
   - verse: 4
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God saw the light, and saw that it was good. God divided the light from the darkness."
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "good"
 
@@ -168,19 +250,33 @@ verses:
 
           ipa: "/tov/"
 
-          footnote: 4
+          footnote: 3
 
     web: "God saw the light, and saw that it was good. God divided the light from the darkness."
 
   - verse: 5
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God called the light “day,” and the darkness he called “night.” There was evening and there was morning, the first day."
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "evening … morning"
 
@@ -190,19 +286,33 @@ verses:
 
           ipa: "/ˈe.rev … ˈbo.ker/"
 
-          footnote: 5
+          footnote: 4
 
     web: "God called the light “day,” and the darkness he called “night.” There was evening and there was morning, the first day."
 
   - verse: 6
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God said, “Let there be an expanse in the middle of the waters, and let it divide the waters from the waters.”"
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "expanse"
 
@@ -212,31 +322,59 @@ verses:
 
           ipa: "/raˈki.a/"
 
-          footnote: 6
+          footnote: 5
 
     web: "God said, “Let there be an expanse in the middle of the waters, and let it divide the waters from the waters.”"
 
   - verse: 7
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God made the expanse, and divided the waters which were under the expanse from the waters which were above the expanse; and it was so."
 
-      elements: []
+      elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
     web: "God made the expanse, and divided the waters which were under the expanse from the waters which were above the expanse; and it was so."
 
   - verse: 8
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God called the expanse “sky.” There was evening and there was morning, a second day."
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "sky"
 
@@ -246,31 +384,59 @@ verses:
 
           ipa: "/ʃaˈma.jim/"
 
-          footnote: 7
+          footnote: 6
 
     web: "God called the expanse “sky.” There was evening and there was morning, a second day."
 
   - verse: 9
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God said, “Let the waters under the sky be gathered together to one place, and let the dry land appear”; and it was so."
 
-      elements: []
+      elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
     web: "God said, “Let the waters under the sky be gathered together to one place, and let the dry land appear”; and it was so."
 
   - verse: 10
 
-    foundation: WEB
+    foundation:
+
+      source: WEB
+
+      name: World English Bible
 
     illuminated:
 
       text: "God called the dry land “earth,” and the gathering together of the waters he called “seas.” God saw that it was good."
 
       elements:
+
+        - english: "God"
+
+          hebrew: "אלהים"
+
+          transliteration: "Elohim"
+
+          ipa: "/e.loˈhim/"
+
+          rule: always_illuminate
 
         - english: "earth … seas"
 
@@ -280,7 +446,7 @@ verses:
 
           ipa: "/ˈe.rets … jaˈmim/"
 
-          footnote: 8
+          footnote: 7
 
     web: "God called the dry land “earth,” and the gathering together of the waters he called “seas.” God saw that it was good."
 
@@ -288,109 +454,79 @@ footnotes:
 
   - number: 1
 
-    term: "shamayim"
-
-    note: >
-
-      Shamayim is the Hebrew word rendered “heaven” here.
-
-      Its form has traditionally invited discussion because of
-
-      its apparent dual or plural morphology. The morphology
-
-      should not be used to force a speculative interpretation
-
-      into the English text.
-
-  - number: 2
-
     term: "tohu va-vohu"
 
     note: >
 
       Tohu occurs elsewhere in Biblical Hebrew. Bohu is
 
-      exceptionally rare, occurring in Genesis 1:2 and in
+      exceptionally rare. Its scarcity is one reason the phrase
 
-      passages that echo this language. The scarcity of bohu
+      resists a simple one-to-one English equivalent.
 
-      makes the precise force of the expression difficult to
-
-      reproduce in English.
-
-  - number: 3
+  - number: 2
 
     term: "yehi or — vayehi or"
 
     note: >
 
-      Or means “light.” The Hebrew is extraordinarily concise.
+      Or means “light.” “Let there be light — and there was light”
 
-      “Let there be light — and there was light” should be
+      is treated as one illuminated phrase because the Hebrew
 
-      treated as a single illuminated phrase. Its repetition
+      command and fulfillment form a strikingly compressed poetic unit.
 
-      gives the Hebrew a poetic compression suggestive of
-
-      “shine — and shine was,” without proposing that wording
-
-      as a biblical translation.
-
-  - number: 4
+  - number: 3
 
     term: "tov"
 
     note: >
 
-      Tov can carry the senses good, pleasing, fitting, or
+      Tov can carry senses including good, pleasing, fitting,
 
-      beneficial. The simple English “good” preserves that
+      or beneficial. The English “good” preserves that breadth.
 
-      breadth without over-interpreting it.
-
-  - number: 5
+  - number: 4
 
     term: "erev … boqer"
 
     note: >
 
-      The recurring evening-and-morning formula gives the
+      The evening-and-morning formula contributes to the recurring
 
-      creation account part of its characteristic cadence.
+      cadence and structure of the creation account.
 
-  - number: 6
+  - number: 5
 
     term: "raqia"
 
     note: >
 
-      Raqia is variously rendered “expanse,” “firmament,”
+      Raqia is variously rendered “expanse,” “firmament,” or “vault.”
 
-      or “vault.” Each English rendering carries interpretive
+      The Hebrew illumination lets the reader see the term without
 
-      implications that the Hebrew illumination allows the
+      forcing one English interpretation.
 
-      reader to see without forcing a single interpretation.
-
-  - number: 7
+  - number: 6
 
     term: "shamayim"
 
     note: >
 
-      Shamayim appears again here. Repeated Hebrew terms are
+      Shamayim appears again here. Repeated Hebrew terms may be
 
-      illuminated selectively when the repetition itself helps
+      illuminated when the repetition itself helps reveal the structure
 
-      the reader perceive the structure of the passage.
+      of the passage.
 
-  - number: 8
+  - number: 7
 
     term: "eretz … yamim"
 
     note: >
 
-      The naming of earth and seas continues the chapter’s
+      The naming of earth and seas continues the chapter’s pattern
 
-      pattern of separation, ordering, and naming.
+      of separation, ordering, and naming.
 
