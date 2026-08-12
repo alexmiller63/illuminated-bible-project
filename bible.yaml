@@ -866,3 +866,111 @@ illuminated_bible:
 
           status: developing
 
+illumination:
+
+  principle: >
+
+    Illuminate significant biblical words and phrases consistently
+
+    throughout Scripture. The Illuminated Bible is not an interlinear;
+
+    ordinary words are not illuminated merely because a Hebrew or Greek
+
+    equivalent exists.
+
+  categories:
+
+    - divine_names
+
+    - names_of_persons
+
+    - sacred_and_significant_places
+
+    - creation_and_created_things
+
+    - humanity
+
+    - spiritual_beings
+
+    - covenant
+
+    - worship
+
+    - salvation
+
+    - theological_terms
+
+    - actions_of_god
+
+    - legal_and_moral_terms
+
+    - virtues
+
+    - prophetic_and_messianic_terms
+
+  phrase_rule: >
+
+    When a significant biblical expression forms a meaningful lexical
+
+    or grammatical unit, illuminate the complete English expression
+
+    rather than isolated words within it.
+
+  examples:
+
+    - english: "God"
+
+      category: divine_names
+
+      illuminate: true
+
+    - english: "God's Spirit"
+
+      source: "ruach Elohim"
+
+      category:
+
+        - divine_names
+
+        - spiritual_beings
+
+        - theological_terms
+
+      illuminate_as_phrase: true
+
+    - english: "God created"
+
+      category:
+
+        - divine_names
+
+        - actions_of_god
+
+      illuminate_as_phrase: true
+
+    - english: "God said"
+
+      category:
+
+        - divine_names
+
+        - actions_of_god
+
+      illuminate_as_phrase: true
+
+  consistency_rule: >
+
+    Once a biblical term or expression has been designated for
+
+    illumination, equivalent occurrences should normally receive
+
+    consistent treatment throughout the Bible.
+
+  restraint_rule: >
+
+    Do not illuminate every noun, verb, or source-language word.
+
+    Illumination is selective and is governed by the defined
+
+    categories and the significance of the expression in context.
+
