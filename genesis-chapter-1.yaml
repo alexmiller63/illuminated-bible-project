@@ -2666,5 +2666,51 @@ revision_policy:
 
   shorthand: "No regressing."
 
+# ============================================================
+
+# EDITORIAL AMENDMENT
+
+#
+
+# Logical location:
+
+# editorial_rules -> cross_references
+
+#
+
+# This amendment may remain here at the end of the YAML until
+
+# the canonical file is consolidated.
+
+# ============================================================
+
+editorial_amendments:
+
+  repeated_footnote_markers:
+
+    logical_location: "editorial_rules.cross_references"
+
+    rule: >
+
+      When an illuminated word or phrase refers to an existing
+
+      numbered lexical footnote, the same superscript footnote
+
+      number must appear at every applicable occurrence of that
+
+      illuminated word or phrase. Repeated occurrences do not
+
+      create new footnotes or new footnote numbers. They repeat
+
+      the superscript reference to the already established note.
+
+    example: >
+
+      If raqia is associated with footnote 7, every applicable
+
+      illuminated occurrence of raqia displays superscript 7 and
+
+      refers to the same footnote 7.
+
 
 
