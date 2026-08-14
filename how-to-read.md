@@ -74,7 +74,7 @@ Scan the English in bold. You should be able to read the English naturally witho
 
 ### 3. Follow Your Curiosity
 
-When something catches your attention—or when you are simply curious—read the transliteration. It lets you encounter the sound and form of the original word without requiring you to know the original alphabet.
+When something catches your attention—or when you are simply curious—read the transliteration. Transliteration represents the original word in familiar Latin letters. It helps you recognize and approach the word without requiring you to know the original alphabet; the IPA in the next step provides the more precise guide to how the word is pronounced.
 
 ### 4. Read the IPA
 
