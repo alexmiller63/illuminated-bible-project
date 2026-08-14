@@ -3414,3 +3414,109 @@ consolidation_record:
 
 # ============================================================
 
+# ============================================================
+
+# EDITORIAL AMENDMENT
+
+#
+
+# Genesis 1:14 — complete phrase illumination
+
+#
+
+# Logical locations:
+
+# verses -> Genesis 1:14 -> illuminated
+
+# lexical_notes
+
+#
+
+# This amendment may remain at the end of the YAML until
+
+# the next canonical consolidation.
+
+# ============================================================
+
+genesis_1_14_complete_phrase_amendment:
+
+  logical_location:
+
+    - "verses[Genesis 1:14].illuminated"
+
+    - "lexical_notes"
+
+  replaces:
+
+    english: "seasons / appointed times"
+
+    hebrew: "מוֹעֲדִים"
+
+    transliteration: "mo'adim"
+
+    ipa: "/mo.aˈdim/"
+
+    footnote: moadim
+
+  replacement:
+
+    english: "marking the changes of the year"
+
+    hebrew: "וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים"
+
+    transliteration: "vehayu le'otot ulemo'adim uleyamim veshanim"
+
+    ipa: "/ve.haˈju le.oˈtot u.le.mo.aˈdim u.le.jaˈmim ve.ʃaˈnim/"
+
+    footnote: signs-appointed-times-days-years
+
+  rendering_rule: >
+
+    In the illuminated text, the complete BBE expression
+
+    [marking the changes of the year] is treated as one illuminated
+
+    phrase. The Hebrew, transliteration, IPA, and superscript footnote
+
+    marker belong to the complete expression. The renderer must not
+
+    attach mo'adim alone to the complete English phrase.
+
+  footnote_replacement:
+
+    id: signs-appointed-times-days-years
+
+    title: "signs, appointed times, days, and years"
+
+    text: >
+
+      The Bible in Basic English compresses the Hebrew expression
+
+      into the phrase "marking the changes of the year." The Hebrew
+
+      is more explicit: le'otot, "for signs"; ulemo'adim, "and for
+
+      appointed times"; uleyamim, "and for days"; veshanim, "and
+
+      years." Mo'adim has a semantic range including appointed times,
+
+      appointed occasions, or fixed times and is often translated
+
+      "seasons." The illumination presents the complete Hebrew
+
+      expression so that the reader can see how the broader BBE
+
+      wording relates to the underlying Hebrew rather than implying
+
+      that mo'adim by itself means "marking the changes of the year."
+
+    cross_references:
+
+      - "Genesis 1:14"
+
+# ============================================================
+
+# END GENESIS 1:14 AMENDMENT
+
+# ============================================================
+
