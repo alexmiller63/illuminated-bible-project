@@ -2132,3 +2132,499 @@ verses:
 
         ipa: "/jom ha.ʃiˈʃi/"
 
+# ============================================================
+
+# LEXICAL / NUMBERED FOOTNOTES
+
+# Part 4
+
+# ============================================================
+
+lexical_notes:
+
+  bara:
+
+    title: "bara"
+
+    text: >
+
+      Bara means "created" or "made." The verb itself does not specify
+
+      creation from nothing, creatio ex nihilo. Whether Genesis teaches
+
+      creation ex nihilo is a larger interpretive and theological
+
+      question, not part of the lexical meaning of bara.
+
+  shamayim-dual-skies:
+
+    title: "shamayim — dual-skies hypothesis"
+
+    status: hypothesis
+
+    text: >
+
+      Shamayim has a form historically associated with the Hebrew
+
+      dual. The Illuminated Bible proposes as a hypothesis that this
+
+      may be understood as "dual skies": the sky above and the sky
+
+      below, together comprising the celestial sphere, with the
+
+      observer's horizon dividing that sphere into an upper and a
+
+      lower hemisphere. This is an interpretive hypothesis, not a
+
+      proposed translation of shamayim, and the grammatical form
+
+      alone does not establish it. Genesis 1:8 is particularly
+
+      significant because the text says that God calls the raqia
+
+      shamayim.
+
+    cross_references:
+
+      - "Isaiah 40:22 — chug"
+
+      - "Job 26:10 — chug"
+
+      - "Job 26:7"
+
+    caution: >
+
+      These passages are offered as parallels for consideration,
+
+      not as proof of the hypothesis.
+
+  tohu-va-vohu:
+
+    title: "tohu va-vohu"
+
+    text: >
+
+      Tohu occurs elsewhere in biblical Hebrew with senses involving
+
+      emptiness, waste, desolation, or formlessness. Bohu is much
+
+      rarer and occurs only in association with tohu in the Hebrew
+
+      Bible. The unusual pairing therefore deserves attention as a
+
+      compact and memorable expression.
+
+    cross_references:
+
+      - "Isaiah 34:11"
+
+      - "Jeremiah 4:23"
+
+  ruach-elohim:
+
+    title: "ruach Elohim"
+
+    text: >
+
+      Ruach can mean "spirit," "wind," or "breath." Accordingly,
+
+      ruach Elohim has a range of possible resonance broader than
+
+      the English "God's Spirit." "Breath of God" reflects an
+
+      important sense of ruach, though it is not necessarily the
+
+      translation intended here.
+
+  yehi-or:
+
+    title: "yehi or, vayehi or"
+
+    text: >
+
+      Yehi or, vayehi or is remarkably terse and poetic. The repeated
+
+      or, "light," and the closely balanced verbal forms give the
+
+      Hebrew a compactness difficult to reproduce in English.
+
+      "Shine—and shine was" is not intended as a translation of the
+
+      Hebrew, but only as an illustration of its concision,
+
+      repetition, and poetic force.
+
+  yom-echad:
+
+    title: "yom echad"
+
+    text: >
+
+      Genesis 1:5 uses yom echad, literally "one day" or "day one,"
+
+      rather than an ordinary ordinal expression meaning "first day."
+
+      Unlike the subsequent numbered days, which use ordinal numbers,
+
+      the first is called yom echad. The reason for this distinctive
+
+      construction is uncertain.
+
+    cross_references:
+
+      - "Genesis 1:8 — yom sheni"
+
+      - "Genesis 1:13 — yom shelishi"
+
+  raqia:
+
+    title: "raqia"
+
+    text: >
+
+      Raqia is the expanse separating waters below from waters above.
+
+      Genesis 1:8 states that God calls the raqia shamayim. The
+
+      precise physical conception represented by raqia is debated.
+
+  moadim:
+
+    title: "mo'adim"
+
+    text: >
+
+      Mo'adim has a semantic range including appointed times,
+
+      appointed occasions, or fixed times. In Genesis 1:14 the
+
+      Bible in Basic English renders the corresponding expression
+
+      within the phrase "marking the changes of the year." The
+
+      illumination preserves that English wording while exposing
+
+      the broader Hebrew semantic range.
+
+  sun-moon-naming:
+
+    title: "the greater light and the smaller light"
+
+    text: >
+
+      Biblical Hebrew possesses ordinary words for the sun and moon:
+
+      shemesh and yareach. Genesis 1:16 does not use those names.
+
+      Instead it describes them as the greater light and the smaller
+
+      light in the Bible in Basic English foundation. The underlying
+
+      Hebrew contrasts the great light and the small light. The stars,
+
+      by contrast, are called by the ordinary word kokhavim.
+
+    interpretation:
+
+      status: hypothesis
+
+      text: >
+
+        The avoidance of the ordinary names for sun and moon may be
+
+        significant in the ancient Near Eastern religious context
+
+        and may contribute to the presentation of these celestial
+
+        bodies as created objects rather than divine beings.
+
+    cross_references:
+
+      - "Deuteronomy 4:19"
+
+      - "Psalm 136:7-9"
+
+  raqia-shamayim:
+
+    title: "raqia and shamayim"
+
+    text: >
+
+      Genesis 1:8 says that God called the raqia shamayim. Yet
+
+      Genesis 1:14, 1:15, and 1:17 subsequently use the fuller
+
+      construction birqia hashamayim, "in the expanse of the
+
+      heavens." Raqia and shamayim therefore overlap closely in
+
+      Genesis 1 but should not automatically be treated as perfectly
+
+      interchangeable lexical synonyms.
+
+    inquiry: >
+
+      What relationship does Genesis intend between the named realm
+
+      shamayim and the raqia associated with it?
+
+    status: open_question
+
+  nefesh-chayah:
+
+    title: "nefesh chayah"
+
+    text: >
+
+      Nefesh chayah is commonly translated "living creature" or
+
+      "living being." Nefesh has a broader biblical range than
+
+      the English word "creature" suggests and may elsewhere be
+
+      rendered being, life, person, or soul. Genesis itself
+
+      provides important cross-references. Genesis 1:24 again
+
+      uses nefesh chayah for land creatures, while Genesis 2:7
+
+      applies the same expression to the human after God breathes
+
+      into him the breath of life. The Hebrew connection should
+
+      be exposed without implying that every occurrence of nefesh
+
+      carries every later theological meaning associated with the
+
+      English word "soul."
+
+    cross_references:
+
+      - "Genesis 1:24"
+
+      - "Genesis 2:7"
+
+  tanninim:
+
+    title: "tanninim"
+
+    text: >
+
+      Tanninim has a broader biblical range than the English
+
+      "sea creatures." Elsewhere tannin can designate great
+
+      serpentine, dragon-like, or formidable creatures. The
+
+      immediate translation should remain appropriate to its
+
+      context while the illumination exposes the richer Hebrew
+
+      vocabulary.
+
+  peru-urvu:
+
+    title: "peru urvu"
+
+    text: >
+
+      Peru urvu is a compact two-part formula. Peru comes from
+
+      parah, "to bear fruit" or "be fruitful." Urvu comes from
+
+      ravah, "to become many," "increase," or "multiply." The
+
+      verbs complement rather than merely duplicate one another:
+
+      bear fruit; become many.
+
+    cross_references:
+
+      - "Genesis 1:22"
+
+      - "Genesis 1:28"
+
+  behemah-behemoth:
+
+    title: "behemah, Behemoth, and English behemoth"
+
+    text: >
+
+      Behemah is broader than the modern English agricultural
+
+      category "livestock." Depending on context, it can denote
+
+      an animal or beast, often particularly a larger quadruped
+
+      and frequently a domesticated animal. The word is directly
+
+      related to Behemoth, behemot, the extraordinary creature
+
+      described in Job 40:15. English subsequently borrowed
+
+      biblical Behemoth as "behemoth," now used for something
+
+      extraordinarily large, massive, formidable, or powerful.
+
+    cross_references:
+
+      - "Job 40:15"
+
+  plural-image-language:
+
+    title: "Let us make — our image — like us"
+
+    text: >
+
+      The Hebrew plurals are real. Na'aseh means "let us make";
+
+      betzalmenu, "in our image"; and kidmutenu, "according to
+
+      our likeness." The grammar therefore raises the question:
+
+      to whom does the "us" refer? Interpretations have included
+
+      God addressing a heavenly or divine council, while
+
+      Christian readers have historically perceived Trinitarian
+
+      significance in the wording. The grammar itself does not
+
+      determine among theological or historical interpretations.
+
+      Verse 27 makes the question still more striking because the
+
+      language returns to the singular: Elohim created the human
+
+      in his image.
+
+    principle: >
+
+      Illumination may raise questions the text itself does not answer.
+
+    cross_references:
+
+      - "Genesis 1:27"
+
+  adam-forward-reference:
+
+    title: "adam"
+
+    text: >
+
+      Here adam can mean "human" or "humankind"; it need not yet
+
+      function as the personal name Adam. Compare Genesis 2:7,
+
+      where ha-adam, "the human," is formed from ha-adamah,
+
+      "the ground." The fuller adam-adamah wordplay should be
+
+      illuminated there.
+
+    cross_references:
+
+      - "Genesis 2:7"
+
+  singular-plural-1-27:
+
+    title: "singular and plural in Genesis 1:27"
+
+    text: >
+
+      Genesis 1:26 says, "Let us make ... in our image ..."
+
+      and uses plural language. Verse 27 returns to singular
+
+      grammar: Elohim created the human in his image. A second
+
+      grammatical movement occurs within verse 27 itself. The
+
+      text first speaks of ha-adam, "the human," in the singular,
+
+      and concludes zakhar u-neqevah bara otam, "male and female
+
+      he created them." The illumination exposes these movements
+
+      without requiring a particular interpretation.
+
+    cross_references:
+
+      - "Genesis 1:26"
+
+  kavash-radah:
+
+    title: "kavash and radah"
+
+    text: >
+
+      Kavash means to subdue, subject, or bring under control.
+
+      The force of "subdue" is therefore present in the Hebrew
+
+      rather than being merely an English embellishment. Radah
+
+      means to rule, govern, or exercise dominion over. The
+
+      lexical meanings should be presented before modern
+
+      interpretations are imposed upon them. The words themselves
+
+      neither require an exploitative interpretation nor erase
+
+      the strength of the authority expressed.
+
+  tov-meod:
+
+    title: "tov me'od"
+
+    text: >
+
+      The repeated creation judgment tov, "good," is intensified
+
+      at the completion of the chapter to tov me'od, "very good."
+
+      The illumination should make that culmination visible.
+
+# ============================================================
+
+# HISTORICAL / LITERARY NOTES
+
+# ============================================================
+
+historical_context:
+
+  genesis_1_14:
+
+    statement: >
+
+      Genesis 1:14 belongs to an ancient Near Eastern cultural world
+
+      in which observation of celestial phenomena was important for
+
+      calendars, appointed times, omens, and religious practice.
+
+    contrast: >
+
+      Genesis assigns the heavenly lights functions involving signs,
+
+      appointed times, days, and years while presenting those lights
+
+      as created objects under Elohim rather than as independent
+
+      deities.
+
+    caution: >
+
+      This historical comparison does not by itself establish that
+
+      Genesis borrowed from any particular Babylonian text.
+
+    related_tradition:
+
+      - "Mesopotamian astral traditions"
+
+      - "Babylonian astronomical and astrological traditions"
+
+      - "Enuma Elish"
+
