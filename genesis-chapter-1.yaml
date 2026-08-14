@@ -1486,3 +1486,649 @@ verses:
 
         cross_reference: "Genesis 1:1, 1:8"
 
+# ============================================================
+
+# VERSES
+
+# Genesis 1:21-31
+
+# Part 3
+
+# ============================================================
+
+  - reference: "1:21"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "great sea creatures"
+
+        hebrew: "הַתַּנִּינִם הַגְּדֹלִים"
+
+        transliteration: "hattanninim hagedolim"
+
+        ipa: "/ha.ta.niˈnim ha.ge.doˈlim/"
+
+        footnote: tanninim
+
+      - english: "living creature"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        ipa: "/ˈne.feʃ χaˈja/"
+
+        footnote: nefesh-chayah
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "after their kind"
+
+        hebrew: "לְמִינֵהֶם"
+
+        transliteration: "lemineihem"
+
+        ipa: "/le.mi.neˈhem/"
+
+        cross_reference: "Genesis 1:11-12"
+
+      - english: "good"
+
+        hebrew: "טוֹב"
+
+        transliteration: "tov"
+
+        ipa: "/tov/"
+
+  - reference: "1:22"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "Be fertile"
+
+        hebrew: "פְּרוּ"
+
+        transliteration: "peru"
+
+        ipa: "/pəˈʁu/"
+
+        gloss: "be fruitful"
+
+        footnote: peru-urvu
+
+      - english: "be increased"
+
+        hebrew: "וּרְבוּ"
+
+        transliteration: "urvu"
+
+        ipa: "/uʁˈvu/"
+
+        gloss: "multiply / become many"
+
+        footnote: peru-urvu
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+    cross_references:
+
+      - "Genesis 1:28"
+
+  - reference: "1:23"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+        ipa: "/ˈe.ʁev/"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+        ipa: "/ˈbo.keʁ/"
+
+      - english: "the fifth day"
+
+        hebrew: "יוֹם חֲמִישִׁי"
+
+        transliteration: "yom chamishi"
+
+        ipa: "/jom χa.miˈʃi/"
+
+  - reference: "1:24"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+      - english: "living creatures"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        ipa: "/ˈne.feʃ χaˈja/"
+
+        footnote: nefesh-chayah
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "livestock"
+
+        hebrew: "בְּהֵמָה"
+
+        transliteration: "behemah"
+
+        ipa: "/be.heˈma/"
+
+        gloss: "beast / animal"
+
+        footnote: behemah-behemoth
+
+      - english: "creeping things"
+
+        hebrew: "רֶמֶשׂ"
+
+        transliteration: "remes"
+
+        ipa: "/ˈʁe.mes/"
+
+      - english: "after their kind"
+
+        hebrew: "לְמִינָהּ"
+
+        transliteration: "leminah"
+
+        ipa: "/le.miˈna/"
+
+        cross_reference: "Genesis 1:11-12"
+
+  - reference: "1:25"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "beasts of the earth"
+
+        hebrew: "חַיַּת הָאָרֶץ"
+
+        transliteration: "chayat ha'aretz"
+
+        ipa: "/χaˈjat haˈa.ʁets/"
+
+      - english: "sort"
+
+        hebrew: "מִין"
+
+        transliteration: "min"
+
+        ipa: "/min/"
+
+        gloss: "kind"
+
+      - english: "cattle"
+
+        hebrew: "בְּהֵמָה"
+
+        transliteration: "behemah"
+
+        ipa: "/be.heˈma/"
+
+        footnote: behemah-behemoth
+
+        cross_reference: "Genesis 1:24"
+
+      - english: "everything which goes on the land"
+
+        hebrew: "כָּל־רֶמֶשׂ הָאֲדָמָה"
+
+        transliteration: "kol-remes ha'adamah"
+
+        ipa: "/kol ˈʁe.mes ha.a.daˈma/"
+
+      - english: "sort"
+
+        hebrew: "מִין"
+
+        transliteration: "min"
+
+        ipa: "/min/"
+
+        gloss: "kind"
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "good"
+
+        hebrew: "טוֹב"
+
+        transliteration: "tov"
+
+        ipa: "/tov/"
+
+  - reference: "1:26"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "Let us make"
+
+        hebrew: "נַעֲשֶׂה"
+
+        transliteration: "na'aseh"
+
+        ipa: "/na.aˈse/"
+
+        footnote: plural-image-language
+
+      - english: "man"
+
+        hebrew: "אָדָם"
+
+        transliteration: "adam"
+
+        ipa: "/aˈdam/"
+
+        gloss: "human / humankind"
+
+        footnote: adam-forward-reference
+
+      - english: "in our image"
+
+        hebrew: "בְּצַלְמֵנוּ"
+
+        transliteration: "betzalmenu"
+
+        ipa: "/be.tsalˈme.nu/"
+
+        footnote: plural-image-language
+
+      - english: "like us"
+
+        hebrew: "כִּדְמוּתֵנוּ"
+
+        transliteration: "kidmutenu"
+
+        ipa: "/kid.muˈte.nu/"
+
+        gloss: "according to our likeness"
+
+        footnote: plural-image-language
+
+    cross_references:
+
+      - "Genesis 1:27"
+
+      - "Genesis 2:7"
+
+  - reference: "1:27"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "made"
+
+        hebrew: "בָּרָא"
+
+        transliteration: "bara"
+
+        ipa: "/baˈʁa/"
+
+        gloss: "created"
+
+        footnote: bara
+
+        cross_reference: "Genesis 1:1"
+
+      - english: "man"
+
+        hebrew: "הָאָדָם"
+
+        transliteration: "ha-adam"
+
+        ipa: "/ha.aˈdam/"
+
+        gloss: "the human"
+
+        footnote: adam-forward-reference
+
+        cross_reference: "Genesis 1:26; Genesis 2:7"
+
+      - english: "in his image"
+
+        hebrew: "בְּצַלְמוֹ"
+
+        transliteration: "betzalmo"
+
+        ipa: "/be.tsalˈmo/"
+
+        footnote: singular-plural-1-27
+
+      - english: "in the image of God"
+
+        hebrew: "בְּצֶלֶם אֱלֹהִים"
+
+        transliteration: "betzelem Elohim"
+
+        ipa: "/beˈtse.lem e.loˈhim/"
+
+      - english: "male and female"
+
+        hebrew: "זָכָר וּנְקֵבָה"
+
+        transliteration: "zakhar u-neqevah"
+
+        ipa: "/zaˈχaʁ u.ne.keˈva/"
+
+        footnote: singular-plural-1-27
+
+      - english: "he made them"
+
+        hebrew: "בָּרָא אֹתָם"
+
+        transliteration: "bara otam"
+
+        ipa: "/baˈʁa oˈtam/"
+
+        gloss: "he created them"
+
+        footnote: singular-plural-1-27
+
+    cross_references:
+
+      - "Genesis 1:26"
+
+  - reference: "1:28"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "Be fertile"
+
+        hebrew: "פְּרוּ"
+
+        transliteration: "peru"
+
+        ipa: "/pəˈʁu/"
+
+        gloss: "be fruitful"
+
+        footnote: peru-urvu
+
+        cross_reference: "Genesis 1:22"
+
+      - english: "be increased"
+
+        hebrew: "וּרְבוּ"
+
+        transliteration: "urvu"
+
+        ipa: "/uʁˈvu/"
+
+        gloss: "multiply / become many"
+
+        footnote: peru-urvu
+
+        cross_reference: "Genesis 1:22"
+
+      - english: "make the earth full"
+
+        hebrew: "מִלְאוּ אֶת־הָאָרֶץ"
+
+        transliteration: "mil'u et-ha'aretz"
+
+        ipa: "/milˈu et haˈa.ʁets/"
+
+        gloss: "fill the earth"
+
+      - english: "be masters of it"
+
+        hebrew: "וְכִבְשֻׁהָ"
+
+        transliteration: "vekhivshuha"
+
+        ipa: "/ve.χiv.ʃuˈha/"
+
+        gloss: "subdue it"
+
+        footnote: kavash-radah
+
+      - english: "have rule"
+
+        hebrew: "וּרְדוּ"
+
+        transliteration: "uredu"
+
+        ipa: "/u.ʁəˈdu/"
+
+        gloss: "have dominion / rule"
+
+        footnote: kavash-radah
+
+  - reference: "1:29"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "seed"
+
+        hebrew: "זֶרַע"
+
+        transliteration: "zera"
+
+        ipa: "/ˈze.ʁa/"
+
+        cross_reference: "Genesis 1:11-12"
+
+      - english: "food"
+
+        hebrew: "אָכְלָה"
+
+        transliteration: "okhlah"
+
+        ipa: "/oχˈla/"
+
+        lexical_relation:
+
+          hebrew: "אָכַל"
+
+          transliteration: "akhal"
+
+          meaning: "to eat"
+
+  - reference: "1:30"
+
+    foundation: WEB
+
+    illuminated:
+
+      - english: "earth"
+
+        hebrew: "אֶרֶץ"
+
+        transliteration: "eretz"
+
+        ipa: "/ˈe.ʁets/"
+
+      - english: "living thing"
+
+        hebrew: "נֶפֶשׁ חַיָּה"
+
+        transliteration: "nefesh chayah"
+
+        ipa: "/ˈne.feʃ χaˈja/"
+
+        gloss: "living being / living creature"
+
+        footnote: nefesh-chayah
+
+        cross_reference: "Genesis 1:20"
+
+      - english: "food"
+
+        hebrew: "אָכְלָה"
+
+        transliteration: "okhlah"
+
+        ipa: "/oχˈla/"
+
+        cross_reference: "Genesis 1:29"
+
+  - reference: "1:31"
+
+    foundation: Basic English
+
+    illuminated:
+
+      - english: "God"
+
+        hebrew: "אֱלֹהִים"
+
+        transliteration: "Elohim"
+
+        ipa: "/e.loˈhim/"
+
+      - english: "everything which he had made"
+
+        hebrew: "אֶת־כָּל־אֲשֶׁר עָשָׂה"
+
+        transliteration: "et kol asher asah"
+
+        ipa: "/et kol aˈʃeʁ aˈsa/"
+
+      - english: "very good"
+
+        hebrew: "טוֹב מְאֹד"
+
+        transliteration: "tov me'od"
+
+        ipa: "/tov meˈod/"
+
+        footnote: tov-meod
+
+      - english: "evening"
+
+        hebrew: "עֶרֶב"
+
+        transliteration: "erev"
+
+        ipa: "/ˈe.ʁev/"
+
+      - english: "morning"
+
+        hebrew: "בֹּקֶר"
+
+        transliteration: "boqer"
+
+        ipa: "/ˈbo.keʁ/"
+
+      - english: "the sixth day"
+
+        hebrew: "יוֹם הַשִּׁשִּׁי"
+
+        transliteration: "yom hashishi"
+
+        ipa: "/jom ha.ʃiˈʃi/"
+
