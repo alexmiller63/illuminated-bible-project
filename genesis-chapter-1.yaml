@@ -36,6 +36,50 @@ presentation:
 
   scripture_font_size: 14
 
+  large_print:
+
+    enabled: true
+
+    rule: >
+
+      Scripture must be rendered as genuine large print at 14 points.
+
+      Scripture type must never be reduced merely to make additional
+
+      verses fit on a page. The chapter must use as many pages as
+
+      necessary to preserve the approved 14-point scripture size.
+
+  source_label:
+
+    enabled: true
+
+    display:
+
+      Basic English: BBE
+
+      WEB: WEB
+
+    size_points: 6
+
+    position: inline_after_verse_number
+
+    line_break_after: false
+
+    rule: >
+
+      In the illuminated left column, the verse number is followed
+
+      immediately by the source label BBE or WEB in 6-point type.
+
+      The verse text follows immediately on the same line. There must
+
+      be no line break separating the source label from the verse text.
+
+      The full name "Basic English" must not be printed as the source
+
+      label in the scripture column.
+
   columns:
 
     illuminated:
@@ -92,6 +136,18 @@ presentation:
 
       paraphrased, weakened, or deleted merely to make a page fit.
 
+    labeling:
+
+      heading: null
+
+      prohibit_status_labels: true
+
+      rule: >
+
+        Footnotes appear in the far-right footnote column without
+
+        editorial status labels such as "NEW".
+
   hebrew:
 
     direction: rtl
@@ -128,7 +184,11 @@ presentation:
 
       Approved illumination and footnotes must not be abbreviated,
 
-      paraphrased, or deleted merely to make material fit.
+      paraphrased, deleted, or rendered in smaller type merely to make
+
+      material fit. Genesis 1:1-31 must be presented in full, using as
+
+      many pages as necessary.
 
 # ============================================================
 
@@ -1968,7 +2028,11 @@ editorial_rules:
 
       Approved illumination and footnotes must not be abbreviated,
 
-      paraphrased, or deleted merely to make material fit.
+      paraphrased, deleted, or rendered in smaller type merely to make
+
+      material fit. Genesis 1:1-31 must be presented in full, using as
+
+      many pages as necessary.
 
 # ============================================================
 
@@ -2107,6 +2171,16 @@ typography:
     weight: regular
 
     size_points: 14
+
+  source_label:
+
+    category: book_serif
+
+    size_points: 6
+
+    position: inline_after_verse_number
+
+    line_break_after: false
 
   hebrew:
 
