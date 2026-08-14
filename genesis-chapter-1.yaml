@@ -2712,5 +2712,59 @@ editorial_amendments:
 
       refers to the same footnote 7.
 
+# ============================================================
+
+# EDITORIAL AMENDMENT
+
+#
+
+# Logical location:
+
+# editorial_rules -> illumination
+
+#
+
+# This amendment may remain here at the end of the YAML until
+
+# the canonical file is consolidated.
+
+# ============================================================
+
+  illuminated_english_brackets:
+
+    logical_location: "editorial_rules.illumination"
+
+    rule: >
+
+      In the rendered illuminated text, every English word or
+
+      phrase selected for illumination must be enclosed in square
+
+      brackets: [ ]. The opening bracket appears immediately
+
+      before the first English word being illuminated, and the
+
+      closing bracket appears immediately after the final English
+
+      word or punctuation belonging to that illuminated expression.
+
+      The brackets identify precisely which portion of the English
+
+      foundation text corresponds to the Hebrew, transliteration,
+
+      and IPA information that follows.
+
+      The brackets are a rendering convention only. They do not
+
+      alter the wording of the selected English translation.
+
+    examples:
+
+      - "[God] אֱלֹהִים Elohim /e.loˈhim/"
+
+      - "[greater light] הַמָּאוֹר הַגָּדֹל hama'or hagadol /ha.maˈoʁ ha.gaˈdol/"
+
+      - "[Let there be light, and there was light] יְהִי אוֹר וַיְהִי אוֹר yehi or, vayehi or /jeˈhi oʁ va.jeˈhi oʁ/"
+
 
 
