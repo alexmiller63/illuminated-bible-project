@@ -2628,3 +2628,789 @@ historical_context:
 
       - "Enuma Elish"
 
+# ============================================================
+
+# EDITORIAL RULES
+
+# Part 5
+
+# ============================================================
+
+editorial_rules:
+
+  english_foundation:
+
+    default: Basic English
+
+    alternate: WEB
+
+    rule: >
+
+      The Bible in Basic English is the normal English foundation.
+
+      Its deliberately simple language leaves room for the original
+
+      language to do the illuminating. The World English Bible is
+
+      used selectively where its phrasing is clearer, more graceful,
+
+      or better preserves a feature important to the original text.
+
+      Basic English is therefore the foundation; the WEB appears
+
+      when it earns its place.
+
+  illumination:
+
+    structure: inline
+
+    order:
+
+      - english
+
+      - original_script
+
+      - transliteration
+
+      - ipa
+
+    completeness:
+
+      required: true
+
+      rule: >
+
+        Every item designated for illumination must include the English
+
+        word or phrase, the corresponding original-language script,
+
+        transliteration, and IPA pronunciation. A renderer must never
+
+        silently omit an illumination merely because one of these fields
+
+        is absent.
+
+    principle: >
+
+      The complete English foundation verse remains readable as
+
+      continuous prose. Selected English words or phrases are expanded
+
+      inline with original-language information. Illumination must
+
+      never replace the verse with a glossary or interlinear display.
+
+    english_brackets:
+
+      enabled: true
+
+      opening: "["
+
+      closing: "]"
+
+      rule: >
+
+        In the rendered illuminated text, every English word or phrase
+
+        selected for illumination must be enclosed in square brackets.
+
+        The opening bracket appears immediately before the first English
+
+        word being illuminated, and the closing bracket appears
+
+        immediately after the final English word or punctuation
+
+        belonging to that illuminated expression.
+
+        The bracketed English expression must correspond precisely to
+
+        the original-language expression that follows it. An English
+
+        phrase must not be bracketed more broadly than the Hebrew,
+
+        Aramaic, or Greek expression actually represented by the
+
+        illumination.
+
+        The brackets are a rendering convention only. They do not alter
+
+        the wording of the selected English translation.
+
+      examples:
+
+        - "[God] אֱלֹהִים Elohim /e.loˈhim/"
+
+        - "[greater light] הַמָּאוֹר הַגָּדֹל hama'or hagadol /ha.maˈoʁ ha.gaˈdol/"
+
+        - "[seasons] מוֹעֲדִים mo'adim /mo.aˈdim/"
+
+    exact_correspondence:
+
+      required: true
+
+      rule: >
+
+        The English expression identified for illumination and the
+
+        original-language expression supplied with it must correspond
+
+        to one another. A renderer or editor must not attach a Hebrew,
+
+        Aramaic, or Greek word to a larger English phrase containing
+
+        additional semantic material that is not represented by that
+
+        original-language expression.
+
+        When an English translation expands, paraphrases, or distributes
+
+        the meaning of an original-language expression across a larger
+
+        phrase, the illumination must either identify the exact
+
+        corresponding English portion or explicitly explain the
+
+        translation relationship with a gloss or note.
+
+      example: >
+
+        If mo'adim corresponds to the idea of appointed times or seasons,
+
+        the illumination must not imply that mo'adim itself means "mark."
+
+        Any English wording containing "mark" must be analyzed so that
+
+        the bracketed expression and Hebrew expression correspond
+
+        accurately.
+
+    repeat_policy: >
+
+      If a word or phrase merits illumination, illuminate it again
+
+      when it recurs. Each verse must be capable of serving as the
+
+      reader's first encounter with The Illuminated Bible.
+
+    genesis_1_density: relatively_dense
+
+  english_descendants:
+
+    rule: >
+
+      When an illuminated Hebrew word has produced or directly
+
+      influenced a recognizable English word, identify the
+
+      connection when it genuinely helps the reader understand
+
+      or remember the Hebrew.
+
+    example: "behemah → Behemoth → English 'behemoth'"
+
+  cross_references:
+
+    rule: >
+
+      Once a substantial lexical note has been established, later
+
+      occurrences should normally cross-reference that note rather
+
+      than reproduce it in full.
+
+    repeated_footnote_markers:
+
+      enabled: true
+
+      rule: >
+
+        When an illuminated word or phrase refers to an existing
+
+        numbered lexical footnote, the same superscript footnote
+
+        number must appear at every applicable occurrence of that
+
+        illuminated word or phrase. Repeated occurrences do not
+
+        create new footnotes or new footnote numbers. They repeat
+
+        the superscript reference to the already established note.
+
+      example: >
+
+        If raqia is associated with footnote 7, every applicable
+
+        illuminated occurrence of raqia displays superscript 7 and
+
+        refers to the same footnote 7.
+
+  footnote_numbering:
+
+    mode: stable_by_note_id
+
+    repeated_references_create_new_number: false
+
+    marker_style: superscript
+
+    rule: >
+
+      Each lexical footnote receives one stable footnote number.
+
+      Every illuminated occurrence associated with that lexical note
+
+      displays that same number as a superscript marker. Repetition
+
+      of the marker does not repeat the footnote text and does not
+
+      create another number.
+
+  interpretive_questions:
+
+    rule: >
+
+      When Hebrew grammar or vocabulary exposes a significant
+
+      question, make the linguistic evidence visible before
+
+      presenting interpretations. Illumination may raise questions
+
+      the text itself does not answer.
+
+  historical_context:
+
+    rule: >
+
+      Ancient Near Eastern historical context may be supplied when
+
+      it helps illuminate language, imagery, or literary choices.
+
+      Historical context must remain distinct from lexical meaning
+
+      and must not be presented as proof of literary dependence
+
+      unless the evidence warrants it.
+
+  interpretation:
+
+    governing_principle: >
+
+      Distinguish what the original-language text says from later
+
+      interpretations, doctrines, and debates. Illuminate the
+
+      language first; allow interpretation to follow.
+
+    hypotheses:
+
+      labeling_required: true
+
+  layout_integrity:
+
+    rule: >
+
+      Layout must yield to approved content, never the reverse.
+
+      Approved illumination and footnotes must not be abbreviated,
+
+      paraphrased, deleted, or rendered in smaller type merely to make
+
+      material fit. Genesis 1:1-31 must be presented in full, using as
+
+      many pages as necessary.
+
+# ============================================================
+
+# GENESIS-SPECIFIC RULES
+
+# ============================================================
+
+genesis_specific_rules:
+
+  recurring_illuminations:
+
+    God:
+
+      always_illuminate: true
+
+      hebrew: "אֱלֹהִים"
+
+      transliteration: "Elohim"
+
+      ipa: "/e.loˈhim/"
+
+      exception: >
+
+        When God occurs inside a larger illuminated phrase, such as
+
+        "God's Spirit" / "ruach Elohim", illuminate the larger phrase
+
+        as a single unit.
+
+    light:
+
+      illuminate_all_relevant_occurrences: true
+
+    darkness:
+
+      illuminate_all_relevant_occurrences: true
+
+    day:
+
+      illuminate_all_relevant_occurrences: true
+
+    night:
+
+      illuminate_all_relevant_occurrences: true
+
+    waters:
+
+      illuminate_all_relevant_occurrences: true
+
+    expanse:
+
+      illuminate_all_relevant_occurrences: true
+
+  genesis_1_3:
+
+    poetic_pair:
+
+      english:
+
+        - "Let there be light"
+
+        - "there was light"
+
+      hebrew:
+
+        - "יְהִי אוֹר"
+
+        - "וַיְהִי אוֹר"
+
+      rule: >
+
+        Preserve the relationship between yehi or and vayehi or as
+
+        a single poetic pair while ensuring that each bracketed English
+
+        expression corresponds precisely to its Hebrew expression.
+
+  genesis_1_11_12:
+
+    rule: >
+
+      Preserve the deliberate lexical repetition between verses
+
+      11 and 12.
+
+  genesis_1_14:
+
+    rule: >
+
+      The illumination of mo'adim must correspond precisely to the
+
+      English expression representing appointed times or seasons.
+
+      Do not include an English verb such as "mark" within the
+
+      bracketed expression unless the corresponding Hebrew verbal
+
+      element is also included in the illumination.
+
+  genesis_1_15:
+
+    rule: >
+
+      Illuminate both "lights" and "give light" so the reader can
+
+      see and hear the Hebrew relationship between the noun and
+
+      associated verbal expression.
+
+  genesis_1_18:
+
+    rule: >
+
+      Preserve the repeated creation vocabulary and illuminate the
+
+      language of governing or ruling without implying divinity.
+
+# ============================================================
+
+# ART / TYPOGRAPHY
+
+# Part 6
+
+# ============================================================
+
+art:
+
+  philosophy: restrained
+
+  principle: >
+
+    Artwork should illuminate the biblical book rather than merely
+
+    decorate it. The text remains primary.
+
+  subjects:
+
+    - creation
+
+    - light_and_darkness
+
+    - expanse
+
+    - waters_above_and_below
+
+    - earth_and_seas
+
+    - garden_of_eden
+
+    - Adam_and_Eve
+
+typography:
+
+  principle: >
+
+    Typography is an intentional part of the design rather than a
+
+    technical fallback.
+
+  illuminated_english:
+
+    category: book_serif
+
+    weight: bold
+
+    size_points: 14
+
+  comparison_english:
+
+    category: book_serif
+
+    weight: regular
+
+    size_points: 14
+
+  source_label:
+
+    category: book_serif
+
+    size_points: 6
+
+    position: inline_after_verse_number
+
+    line_break_after: false
+
+  hebrew:
+
+    category: hebrew_serif
+
+    preferred_face: "Noto Serif Hebrew"
+
+    direction: rtl
+
+  greek:
+
+    category: classical_serif
+
+  transliteration:
+
+    category: italic_serif
+
+  ipa:
+
+    category: readable_sans_serif
+
+# ============================================================
+
+# TITLE TYPOGRAPHY
+
+# ============================================================
+
+title_typography:
+
+  hebrew:
+
+    text: "בְּרֵאשִׁית"
+
+    prominence: primary
+
+    relative_size: larger_than_greek
+
+    rule: >
+
+      The Hebrew title is the primary title and must be visibly larger
+
+      and carry greater typographic weight than the Greek title beneath
+
+      it. Hebrew is the original language of Genesis and therefore
+
+      receives visual precedence.
+
+  greek:
+
+    text: "Γένεσις"
+
+    prominence: secondary
+
+    relative_size: smaller_than_hebrew
+
+    rule: >
+
+      The Greek title represents the ancient Septuagint tradition and
+
+      is important to the design, but it remains visually subordinate
+
+      to the Hebrew title.
+
+# ============================================================
+
+# COLUMN PROPORTIONS
+
+# ============================================================
+
+column_proportions:
+
+  order:
+
+    - illuminated
+
+    - comparison
+
+    - footnotes
+
+  illuminated:
+
+    relative_width: widest_scripture_column
+
+    rule: >
+
+      The illuminated left scripture column receives the greatest
+
+      amount of horizontal space among the two scripture columns
+
+      because its English text is expanded by Hebrew, transliteration,
+
+      IPA, brackets, and superscript footnote markers.
+
+  comparison:
+
+    relative_width: narrower_than_illuminated
+
+    rule: >
+
+      The WEB comparison column is narrower than the illuminated
+
+      column. Its continuous unannotated English text naturally
+
+      requires less horizontal space.
+
+  footnotes:
+
+    relative_width: independently_tuned
+
+    rule: >
+
+      The footnote column must remain wide enough for comfortable
+
+      reading while allowing the illuminated column to remain the
+
+      dominant scripture column.
+
+  tuning:
+
+    rule: >
+
+      Exact column widths are renderer-level layout values and may be
+
+      adjusted during mock-up development without changing the
+
+      underlying textual content. Adjustments must preserve the
+
+      established order: illuminated scripture receives the most
+
+      scripture space, the WEB comparison column may be narrower,
+
+      and the footnote column remains independently readable.
+
+# ============================================================
+
+# RENDERING INTEGRITY
+
+# ============================================================
+
+rendering_integrity:
+
+  hidden_paragraphs:
+
+    prohibited: true
+
+    rule: >
+
+      The renderer must not insert empty paragraphs, hidden paragraphs,
+
+      placeholder paragraphs, or other invisible structures that create
+
+      unexplained vertical white space in scripture or footnote columns.
+
+  artifact_glyphs:
+
+    prohibited: true
+
+    rule: >
+
+      Rendering artifacts such as unexplained square glyphs must not
+
+      appear in the finished document. Unsupported characters,
+
+      malformed field codes, empty controls, or other structures that
+
+      render as visible squares must be removed or corrected.
+
+  right_column_top_alignment:
+
+    rule: >
+
+      The WEB comparison column must begin at exactly the same vertical
+
+      position as the corresponding illuminated column. No blank
+
+      paragraph or table-cell artifact may cause the WEB column to
+
+      begin one line lower.
+
+  verse_spacing:
+
+    rule: >
+
+      Consecutive verse rows must follow one another naturally without
+
+      inserted blank lines. Large unexplained gaps between verses are
+
+      rendering errors and must not be used as pagination controls.
+
+  page_breaks:
+
+    deliberate_between_ordinary_verses: false
+
+    rule: >
+
+      Ordinary scripture flow is content-driven. Manual or artificial
+
+      page breaks must not be inserted merely to reposition verses.
+
+      A new page begins only when the remaining page space cannot
+
+      accommodate the next verse row under the approved pagination
+
+      rules.
+
+  footnote_spacing:
+
+    rule: >
+
+      Consecutive footnotes follow one another with ordinary paragraph
+
+      spacing and no unexplained blank areas. Footnote flow must not
+
+      create large vertical gaps between one numbered note and the next.
+
+  footnote_markers:
+
+    style: superscript
+
+    repeat_existing_number: true
+
+    rule: >
+
+      Every illuminated occurrence associated with a numbered footnote
+
+      displays the appropriate superscript marker. When the same lexical
+
+      footnote applies repeatedly, the same superscript number appears
+
+      repeatedly in the illuminated text without creating duplicate
+
+      footnote text.
+
+# ============================================================
+
+# REVISION POLICY
+
+# ============================================================
+
+revision_policy:
+
+  mode: incremental
+
+  rule: >
+
+    Once content or design decisions are approved, later revisions
+
+    change only explicitly requested elements. Unrequested material
+
+    carries forward unchanged.
+
+  shorthand: "No regressing."
+
+# ============================================================
+
+# CONSOLIDATION RECORD
+
+# ============================================================
+
+consolidation_record:
+
+  status: canonical
+
+  supersedes_end_amendments: true
+
+  rule: >
+
+    The previously appended editorial amendments concerning repeated
+
+    footnote markers and illuminated English brackets have now been
+
+    incorporated into their logical locations in the canonical YAML.
+
+    They therefore do not need to remain as separate amendments at the
+
+    end of this consolidated file.
+
+  incorporated_amendments:
+
+    - repeated_footnote_markers
+
+    - illuminated_english_brackets
+
+  additional_corrections:
+
+    - exact_english_original_language_correspondence
+
+    - genesis_1_14_moadim_correspondence
+
+    - repeated_raqia_footnote_markers
+
+    - repeated_shamayim_footnote_markers
+
+    - removal_of_artificial_verse_spacing
+
+    - removal_of_artificial_page_breaks
+
+    - footnote_column_top_alignment
+
+    - continuous_footnote_spacing
+
+    - Hebrew_title_visual_precedence
+
+    - column_width_hierarchy
+
+    - prohibition_of_rendering_square_artifacts
+
+# ============================================================
+
+# END OF genesis-chapter-1.yaml
+
+# ============================================================
+
